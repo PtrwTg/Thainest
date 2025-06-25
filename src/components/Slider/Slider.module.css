@@ -1,0 +1,107 @@
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 540px; /* กำหนดความสูงสำหรับภาพสไลด์บนเดสก์ท็อปและรองรับปุ่ม */
+  overflow: hidden;
+  margin-top: 0; /* Adjust as needed to fit below Navbar */
+  /* Assuming the image height will be defined by the SVG */
+  background-color: #EEE6DC;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%; /* Adjust to take full height of container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Removed placeholder styles */
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.dotNavigation {
+  position: absolute;
+  top: 400px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.activeDot {
+  background-color: #E5C177; /* สีเดียวกับ hover link */
+}
+
+.buyVoucherButton {
+  position: absolute;
+  width: 485px;
+  height: 80px;
+  left: 54px;
+  top: 460px; /* (Image Height - Button Height / 2) = 500 - 40 */
+  gap: 10px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding: 10px;
+  background-color: #E6CCD1;
+  border: none;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.buyVoucherButton:hover {
+  background: #E5C177;
+}
+
+@media (max-width: 768px) {
+  .sliderContainer {
+    height: 148px;
+  }
+  .buyVoucherButton {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    top: 110px;
+    width: 50%;
+    max-width: 156px;
+    height: 26px;
+    font-size: 0.8em;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .dotNavigation {
+    display: none;
+  }
+} 
