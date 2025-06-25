@@ -11,7 +11,7 @@ const AboutBlog = () => {
 
   return (
     <section id="blog" className={styles.aboutBlogSection}>
-      <h2 className={styles.blogTitle}>Wellness Journal</h2>
+      <h2 id="blogSlider" className={styles.blogTitle}>Wellness Journal</h2>
       <div className={styles.blogSliderWrapper}>
         <div className={styles.blogSlider}>
           <img src={blog1} alt="blog1-1" className={styles.blogImg} />

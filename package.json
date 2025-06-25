@@ -10,7 +10,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.6.2"
+    "react-router-dom": "^7.6.2",
+    "postinstall": "chmod +x node_modules/.bin/vite"
   },
   "devDependencies": {
     "@emotion/react": "^11.14.0",

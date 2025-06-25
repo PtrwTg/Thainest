@@ -5,7 +5,6 @@ import fbicon from './fbicon.svg';
 const Contact = () => {
   return (
     <section id="contact" className={styles.contactSection}>
-      <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontWeight: 500, fontSize: 48, color: '#798D70', marginBottom: 32 }}>Contact Us</h2>
       {/* เพิ่มฟอร์มหรือข้อมูลติดต่อที่นี่ */}
       <a
         href="https://www.facebook.com/pattarawit.duangmak"

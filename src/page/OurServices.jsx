@@ -8,7 +8,7 @@ import FacialMas2 from './facialmas2.svg';
 const OurServices = () => {
   return (
     <div id="services">
-      <div className={styles.nurturingSection}>
+      <div id="about" className={styles.nurturingSection}>
         <h2 className={styles.nurturingTitle}>Nurturing Body & Soul</h2>
         <div className={styles.nurturingDesc}>
           At ThaiNest, we believe true healing happens when the body and soul are cared for as one. Inspired by the wisdom of Thai traditions, our mission is to provide a peaceful retreat where you can unplug, unwind, and return to yourself. Our therapists bring not only professional expertise but a deep commitment to comfort, care, and connection.
@@ -39,7 +39,7 @@ const OurServices = () => {
         </div>
       </div>
       {/* Section Environment Your Nest of Calm */}
-      <div id="about" className={styles.envSection}>
+      <div className={styles.envSection}>
         <div className={styles.envText}>
           <span className={styles.envNormal}>Environment Your </span>
           <span className={styles.envMango}>Nest of Calm</span>
