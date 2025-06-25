@@ -87,6 +87,63 @@
     font-size: clamp(1.2rem, 7vw, 32px);
     padding: 0 8px;
   }
+  .nestingExperienceBox {
+    width: 96vw;
+    min-height: 80px;
+    margin: 12px auto 0 auto;
+    padding: 8px 4vw;
+    border-radius: 10px;
+  }
+  .nestingExperienceText {
+    font-size: 1.1rem;
+    padding: 0;
+    word-break: break-word;
+  }
+  .therapySection {
+    padding: 0 2vw;
+    margin: 12px auto 0 auto;
+    max-width: 100vw;
+  }
+  .cardList {
+    gap: 8px;
+  }
+  .therapyCard {
+    padding: 8px 2px;
+    gap: 4px;
+    width: 98vw;
+    max-width: 100vw;
+    min-height: 100px;
+    border-radius: 12px;
+  }
+  .facialSection {
+    padding: 0 2vw !important;
+    margin: 50px auto 0 auto !important;
+    max-width: 100vw !important;
+  }
+  .facialTitle {
+    font-size: 1.1rem !important;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+  }
+  .facialImage {
+    margin: 20px auto 50px auto !important;
+    width: 90vw !important;
+    max-width: 95vw !important;
+  }
+  .facialCardList {
+    gap: 4px !important;
+    padding: 0 !important;
+    margin: 20px !important;
+  }
+  .facialCard {
+    width: 98vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    padding: 8px 2px !important;
+    border-radius: 12px !important;
+    gap: 4px !important;
+    margin-bottom: 0 !important;
+  }
 }
 
 .therapySection {
@@ -180,8 +237,23 @@
   margin-top: 32px;
   text-align: left;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  transition: background 0.2s, border 0.2s, color 0.2s;
+  transition: background 0.25s cubic-bezier(0.4,0,0.2,1),
+              border 0.25s cubic-bezier(0.4,0,0.2,1),
+              color 0.25s cubic-bezier(0.4,0,0.2,1),
+              box-shadow 0.25s cubic-bezier(0.4,0,0.2,1),
+              transform 0.18s cubic-bezier(0.4,0,0.2,1);
   align-self: flex-start;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.cardBtn:hover, .cardBtn:focus {
+  background: #FFFFFF;
+  border: 2px solid #E5C177;
+  color: #798D70;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(229, 193, 119, 0.15);
+  transform: translateY(-2px) scale(1.03);
 }
 
 @media (max-width: 700px) {
@@ -266,6 +338,14 @@
     box-shadow: none;
     text-align: left;
     cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+  }
+  .cardBtn:hover, .cardBtn:focus {
+    background: #FFFFFF;
+    border: 2px solid #E5C177;
+    color: #798D70;
+    text-decoration: none;
   }
 }
 
@@ -365,5 +445,34 @@
   .facialTitle {
     font-size: 40px;
   }
+}
+
+.bgWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bgImage {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.servicesHeroContainer,
+.nestingExperienceBox,
+.centeredImage,
+.therapySection,
+.facialSection,
+.bgWrapper + * {
+  position: relative;
+  z-index: 1;
 }
 

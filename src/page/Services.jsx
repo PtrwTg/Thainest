@@ -16,6 +16,7 @@ import img11 from './11.svg';
 import img4img2 from './4img2.svg';
 import Contact from './Contact';
 import { useCallback } from 'react';
+import bg2 from './BG2.svg';
 
 const cardData = [
   {
@@ -72,6 +73,9 @@ const Services = () => {
 
   return (
     <>
+      <div className={styles.bgWrapper}>
+        <img src={bg2} alt="background" className={styles.bgImage} />
+      </div>
       <div className={styles.servicesHeroContainer}>
         <img
           src={servicesImg}
@@ -106,7 +110,14 @@ const Services = () => {
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>{card.title}</div>
                 <div className={styles.cardDesc}>{card.desc}</div>
-                <button className={styles.cardBtn}>Book Your Nesting Experience</button>
+                <a
+                  href="https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ=="
+                  className={styles.cardBtn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book Your Nesting Experience
+                </a>
               </div>
             </div>
           ))}
@@ -123,6 +134,14 @@ const Services = () => {
             <div className={styles.cardContent}>
               <div className={styles.cardTitle}>Deep Cleansing Facial</div>
               <div className={styles.cardDesc}>Detoxify and hydrate for a clearer, healthier complexion.</div>
+              <a
+                href="https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ=="
+                className={styles.cardBtn}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book Your Nesting Experience
+              </a>
             </div>
           </div>
           <div className={styles.therapyCard}>
@@ -130,6 +149,14 @@ const Services = () => {
             <div className={styles.cardContent}>
               <div className={styles.cardTitle}>Soothing Sensitive Skin Treatment</div>
               <div className={styles.cardDesc}>Calming care for delicate skin types.</div>
+              <a
+                href="https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ=="
+                className={styles.cardBtn}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book Your Nesting Experience
+              </a>
             </div>
           </div>
           <div className={styles.therapyCard}>
@@ -137,6 +164,14 @@ const Services = () => {
             <div className={styles.cardContent}>
               <div className={styles.cardTitle}>Manual Facial Uplifting Massage</div>
               <div className={styles.cardDesc}>A rejuvenating facial massage using lifting techniques and Gua Sha to tone, sculpt, and refresh tired, stressed skin.</div>
+              <a
+                href="https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ=="
+                className={styles.cardBtn}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book Your Nesting Experience
+              </a>
             </div>
           </div>
         </div>
