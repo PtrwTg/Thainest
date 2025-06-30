@@ -1,0 +1,238 @@
+/* Responsive & Quicksand only */
+.nurturingSection {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #798D70;
+  overflow: hidden;
+}
+.nurturingSection::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('./Oppa1.svg') center/cover no-repeat;
+  opacity: 0.8;
+  z-index: 1;
+}
+.nurturingTitle {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 3.5vw, 2rem);
+  line-height: 1.1;
+  text-align: center;
+  color: #EEE6DC;
+  margin-top: clamp(5vh, 8vw, 7vh);
+  position: relative;
+  z-index: 2;
+}
+.nurturingDesc {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  line-height: 1.4;
+  text-align: center;
+  color: #EEE6DC;
+  max-width: 90%;
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(1vh, 2vw, 2vh);
+}
+
+.candleImgContainer {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee6dc;
+  height: 24vh;
+}
+.candleImg {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.servicesCurvedBox {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  background: #798D70 url('./Oppa1.svg');
+  border-bottom-right-radius: 15vw;
+  border-bottom-left-radius: 15vw;
+  height: 24vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: clamp(1vh, 2vw, 2vh);
+  padding-bottom: clamp(1vh, 2vw, 2vh);
+  box-sizing: border-box;
+  overflow: visible;
+  position: relative;
+}
+.servicesTitle {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 3.5vw, 2rem);
+  line-height: 1.1;
+  text-align: center;
+  color: #fff;
+  margin-top: clamp(1vh, 2vw, 2vh);
+}
+.servicesDesc {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  line-height: 1.4;
+  text-align: center;
+  color: #fff;
+  max-width: 80%;
+  margin-top: clamp(1vh, 2vw, 2vh);
+}
+
+.servicesImagesRow {
+  display: flex;
+  flex-direction: row;
+  gap: 4vw;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+}
+.serviceImg {
+  width: 32vw;
+  max-width: 160px;
+  height: 16vh;
+  border-radius: 2vw;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.serviceBtn {
+  width: 18vw;
+  min-width: 7rem;
+  height: 6vh;
+  border: 0.2vw solid #798D70;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: transparent;
+  color: #798D70;
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(0.5vh, 1vw, 1vh);
+  gap: 1vw;
+  text-decoration: none;
+  text-underline-offset: 0.4em;
+  transition: background 0.2s, color 0.2s, text-decoration-color 0.2s;
+  box-sizing: border-box;
+}
+.serviceBtn:hover {
+  background: transparent;
+  color: #798D70;
+  text-decoration: underline;
+  text-decoration-color: #A9B591;
+}
+
+.envSection {
+  width: 100%;
+  min-height: 0;
+  height: 12vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 0;
+}
+.envText {
+  margin: 0 2vw 1vw 0;
+  text-align: right;
+  display: block;
+  width: 100%;
+  justify-content: flex-end;
+}
+.envNormal, .envMango {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  color: #798D70;
+}
+
+.aboutusSpacer {
+  min-height: 27vh;
+  height: 27vh;
+  width: 100%;
+  padding-top: 3vh;
+}
+
+@media (max-width: 900px) {
+  .nurturingSection {
+    height: 16vh;
+  }
+  .candleImgContainer {
+    height: 14vh;
+  }
+  .servicesCurvedBox {
+    height: 18vh;
+  }
+  .aboutusSpacer {
+    min-height: 52vh;
+    height: 52vh;
+    padding-top: 2vh;
+  }
+  .serviceImg {
+    width: 40vw;
+    max-width: 120px;
+    height: 12vh;
+    border-radius: 3vw;
+  }
+  .envSection {
+    height: 8vh;
+  }
+}
+@media (max-width: 600px) {
+  .nurturingSection {
+    height: 14vh;
+  }
+  .candleImgContainer {
+    height: 12vh;
+  }
+  .servicesCurvedBox {
+    height: 14vh;
+  }
+  .aboutusSpacer {
+    min-height: 60vh;
+    height: 60vh;
+    padding-top: 1vh;
+  }
+  .serviceImg {
+    width: 48vw;
+    max-width: 100px;
+    height: 10vh;
+    border-radius: 4vw;
+  }
+  .envSection {
+    height: 6vh;
+  }
+}

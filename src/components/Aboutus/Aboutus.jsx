@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './OurServices.module.css';
+import styles from './Aboutus.module.css';
 import Oppa1 from './Oppa1.svg';
 import CandleImg from './candle.svg';
 import FacialMas1 from './facialmas1.svg';
 import FacialMas2 from './facialmas2.svg';
 
-const OurServices = () => {
+const Aboutus = () => {
   return (
     <div id="services">
       <div id="about" className={styles.nurturingSection}>
@@ -27,6 +27,8 @@ const OurServices = () => {
           At ThaiNest, we believe that true wellness begins with balance – of body, mind, and spirit. Rooted in the healing traditions of Thai therapy and enhanced by modern facial techniques, our services are thoughtfully designed to restore your natural vitality and inner calm.
           Whether you seek relief from tension, a radiant complexion, or simply a moment of peace, our expert therapists and estheticians are here to tailor each experience to your unique needs. From deeply therapeutic Thai massages to rejuvenating skin treatments, every visit is a step toward your most relaxed and revitalised self.
         </div>
+      </div>
+      <div className={styles.aboutusSpacer}>
         <div className={styles.servicesImagesRow}>
           <div className={styles.serviceCard}>
             <img src={FacialMas1} alt="Facial Massage" className={styles.serviceImg} />
@@ -38,15 +40,17 @@ const OurServices = () => {
           </div>
         </div>
       </div>
-      {/* Section Environment Your Nest of Calm */}
+      {/* Section Environment Your Nest of Calm 
       <div className={styles.envSection}>
         <div className={styles.envText}>
           <span className={styles.envNormal}>Environment Your </span>
           <span className={styles.envMango}>Nest of Calm</span>
         </div>
       </div>
+      */}
+      
     </div>
   );
 };
 
-export default OurServices; 
+export default Aboutus; 

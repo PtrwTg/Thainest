@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Slider from './components/Slider/Slider';
-import OurServices from './page/OurServices';
+import Aboutus from './components/Aboutus/Aboutus';
 import AboutBlog from './page/AboutBlog';
 import Contact from './page/Contact';
 import { Routes, Route } from 'react-router-dom';
@@ -17,7 +17,7 @@ const App = () => {
           <>
             <Slider />
               <NestWelcome />
-              <OurServices />
+              <Aboutus />
               <AboutBlog />
               <Contact />
           </>
