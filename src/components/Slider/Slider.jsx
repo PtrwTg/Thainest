@@ -33,7 +33,7 @@ const Slider = () => {
   };
 
   return (
-    <div className={styles.sliderContainer}>
+    <div id="slide" className={styles.sliderContainer}>
       <div className={styles.slides} style={{ transform: `translateX(${-currentSlide * 100}%)` }}>
         {slides.map((slide, index) => (
           <div key={index} className={styles.slide} style={{ opacity: currentSlide === index ? 1 : 0, transition: 'opacity 0.7s' }}>

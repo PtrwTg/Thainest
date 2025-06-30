@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Navbar.module.css';
-import Logo from './LogoThaiNest.svg?react'; // Import SVG as a React component
+import Logo from './LogoThaiNest.svg'; // import SVG เป็นไฟล์รูป
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.navbarBlur : styles.navbarTransparent}`}>
       <div className={styles.logo} onClick={() => navigate('/')}>
-        <Logo className={styles.logo} />
+        <img src={Logo} alt="ThaiNest Logo" className={styles.logo} />
       </div>
       <div className={styles.menu}>
         <div className={styles.navbarRight}>
@@ -56,7 +56,7 @@ const Navbar = () => {
             ) : (
               <>
                 <li className={styles.navItem}>
-                  <button className={styles.navLink} style={{background:'none',border:'none',padding:0,cursor:'pointer'}} onClick={() => handleScrollTo('home')}>Home</button>
+                  <button className={styles.navLink} style={{background:'none',border:'none',padding:0,cursor:'pointer'}} onClick={() => handleScrollTo('slide')}>Home</button>
                 </li>
                 <li className={styles.navItem}>
                   <Link to="/services" className={styles.navLink}>Our Services</Link>
