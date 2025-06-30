@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import LogoThaiNest from '../Navbar/LogoThaiNest.svg';
+import LogoThaiNest from './Navbar/LogoThaiNest.svg';
 
 
 const SEO = ({ title, description, structuredData }) => {

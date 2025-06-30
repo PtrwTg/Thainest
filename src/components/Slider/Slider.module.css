@@ -1,107 +1,144 @@
 .sliderContainer {
   position: relative;
   width: 100%;
-  height: 540px; /* กำหนดความสูงสำหรับภาพสไลด์บนเดสก์ท็อปและรองรับปุ่ม */
+  height: 32rem; /* 540px -> 32rem */
   overflow: hidden;
-  margin-top: 0; /* Adjust as needed to fit below Navbar */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  outline: 2px solid red; /* debug ขอบ slider */
   /* Assuming the image height will be defined by the SVG */
   background-color: #EEE6DC;
 }
 
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  height: 100%;
 }
 
 .slide {
   min-width: 100%;
-  height: 100%; /* Adjust to take full height of container */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Removed placeholder styles */
+  position: relative;
+  transition: opacity 0.7s;
 }
 
 .slideImage {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensure the image covers the area without distortion */
+  display: block;
 }
 
-.dotNavigation {
+.slideText {
   position: absolute;
-  top: 400px; 
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 0 0.125rem 1rem rgba(0,0,0,0.25);
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  pointer-events: none;
+}
+.slideText h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.dotBarNavigation {
+  position: absolute;
+  left: 50%;
+  bottom: 2.5rem;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 1rem;
+  z-index: 3;
 }
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
+.dotBar {
+  width: 2.5rem;
+  height: 0.4rem;
+  background: rgba(255,255,255,0.5);
+  border-radius: 0.25rem;
+  transition: background 0.3s;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  display: block;
 }
-
-.dot.activeDot {
-  background-color: #E5C177; /* สีเดียวกับ hover link */
+.activeDotBar {
+  background: #E5C177;
 }
 
 .buyVoucherButton {
   position: absolute;
-  width: 485px;
-  height: 80px;
-  left: 54px;
-  top: 460px; /* (Image Height - Button Height / 2) = 500 - 40 */
-  gap: 10px;
-  border-top-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-  padding: 10px;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  width: clamp(10rem, 30vw, 28rem);
+  height: 3.5rem;
+  gap: 0.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
   background-color: #E6CCD1;
   border: none;
   cursor: pointer;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
-  font-size: 32px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  font-size: clamp(1.1rem, 2vw, 2rem);
+  line-height: 1.2;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background 0.3s, color 0.3s;
+  z-index: 4;
 }
-
 .buyVoucherButton:hover {
   background: #E5C177;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .sliderContainer {
-    height: 148px;
+    height: 14rem;
+  }
+  .slideText h1 {
+    font-size: clamp(1.2rem, 7vw, 2.2rem);
   }
   .buyVoucherButton {
-    position: absolute;
-    left: 16px;
-    bottom: 16px;
-    top: 110px;
-    width: 50%;
-    max-width: 156px;
-    height: 26px;
-    font-size: 0.8em;
-    border-top-right-radius: 16px;
-    border-bottom-left-radius: 16px;
-    padding: 0 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    height: 2.2rem;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 0.3rem 1rem;
   }
-  .dotNavigation {
-    display: none;
+  .dotBar {
+    width: 1.2rem;
+    height: 0.3rem;
+  }
+}
+@media (max-width: 600px) {
+  .sliderContainer {
+    height: 8.5rem;
+  }
+  .slideText h1 {
+    font-size: clamp(0.9rem, 8vw, 1.2rem);
+  }
+  .buyVoucherButton {
+    height: 1.5rem;
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    border-top-right-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    padding: 0.2rem 0.7rem;
+  }
+  .dotBar {
+    width: 0.7rem;
+    height: 0.18rem;
   }
 } 

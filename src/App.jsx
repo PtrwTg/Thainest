@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './page/Home';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import Slider from './components/Slider/Slider';
 import OurServices from './page/OurServices';
 import AboutBlog from './page/AboutBlog';
@@ -16,10 +16,12 @@ const App = () => {
         <Route path="/" element={
           <>
             <Slider />
-            <Home />
-            <OurServices />
-            <AboutBlog />
-            <Contact />
+            <div style={{ marginTop: '4.5rem' }}>
+              <Home />
+              <OurServices />
+              <AboutBlog />
+              <Contact />
+            </div>
           </>
         } />
         <Route path="/services" element={<Services />} />
