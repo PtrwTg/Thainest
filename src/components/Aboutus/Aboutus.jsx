@@ -36,7 +36,7 @@ const Aboutus = () => {
           </div>
           <div className={styles.serviceCard}>
             <img src={FacialMas2} alt="Facial Treatments" className={styles.serviceImg} />
-            <button className={styles.serviceBtn} onClick={() => window.location.href='/services'}>Facial Treatments</button>
+            <button className={styles.serviceBtn} onClick={() => window.location.href='/services'}>Treatments</button>
           </div>
         </div>
       </div>

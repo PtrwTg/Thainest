@@ -65,7 +65,7 @@ const Navbar = () => {
                   <button className={styles.navLink} style={{background:'none',border:'none',padding:0,cursor:'pointer'}} onClick={() => handleScrollTo('about')}>About Us</button>
                 </li>
                 <li className={styles.navItem}>
-                  <button className={styles.navLink} style={{background:'none',border:'none',padding:0,cursor:'pointer'}} onClick={() => handleScrollTo('blogSlider')}>Blog</button>
+                  <button className={styles.navLink} style={{background:'none',border:'none',padding:0,cursor:'pointer'}} onClick={() => handleScrollTo('blog')}>Blog</button>
                 </li>
                 <li className={styles.navItem}>
                   <button className={styles.navLink} style={{background:'none',border:'none',padding:0,cursor:'pointer'}} onClick={() => handleScrollTo('contact')}>Contact</button>

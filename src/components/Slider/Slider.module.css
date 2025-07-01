@@ -1,6 +1,11 @@
+.sliderContainer, .sliderImage, .sliderContent {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .sliderContainer {
   position: relative;
-  width: 100%;
   height: 36vh;
   overflow: hidden;
   margin-top: 0 !important;

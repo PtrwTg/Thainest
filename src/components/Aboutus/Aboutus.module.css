@@ -44,7 +44,7 @@
 
 .candleImgContainer {
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -54,14 +54,14 @@
 }
 .candleImg {
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   height: auto;
   display: block;
 }
 
 .servicesCurvedBox {
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   margin: 0 auto;
   background: #798D70 url('./Oppa1.svg');
   border-bottom-right-radius: 15vw;
