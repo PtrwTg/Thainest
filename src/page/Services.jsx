@@ -94,12 +94,12 @@ const Services = () => {
             Book Your Nesting Experience today and step<br />
             into a space of peace and healing.
           </span>
+          <img
+            src={img4}
+            alt="4img"
+            className={styles.centeredImage}
+          />
         </div>
-        <img
-          src={img4}
-          alt="4img"
-          className={styles.centeredImage}
-        />
       </div>
 
       {/* Section Massage Therapy */}

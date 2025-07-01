@@ -5,28 +5,33 @@
   flex-direction: column;
   height: 100vh;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
-  max-width: 100vw;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .servicesHeroContainer {
   flex: 0 0 36vh;
   height: 36vh;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 100vw;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .servicesHeroImg {
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  box-sizing: border-box;
 }
 
 .servicesHeroTextWrapper {
@@ -52,18 +57,19 @@
   color: #fff;
   text-shadow: 0 2px 16px rgba(0,0,0,0.18);
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   word-break: break-word;
 }
 
 .nestingExperienceBox {
-  flex: 0 0 10vh;
-  height: 10vh;
+  flex: 0 0 64vh;
+  height: 64vh;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background: none;
   box-shadow: none;
   border-radius: 0;
@@ -76,20 +82,19 @@
   line-height: 1.1;
   letter-spacing: 0;
   text-align: center;
-  width: 100%;
+  width: 90%;
   color: #798D70;
+  margin-top: 2%;
 }
 
 .centeredImage {
-  flex: 0 0 54vh;
-  height: 54vh;
   width: auto;
-  max-width: 100vw;
-  min-width: 0;
-  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  max-height: 55vh;
   display: block;
   margin: 0 auto;
-  padding: 0;
+  padding: 1%;
 }
 
 @media (max-width: 900px) {
@@ -102,19 +107,17 @@
     flex-basis: 36vh;
   }
   .nestingExperienceBox {
-    height: 10vh;
-    flex-basis: 10vh;
+    height: 68vh;
+    flex-basis: 68vh;
   }
   .centeredImage {
-    height: 54vh;
-    width: auto;
-    max-width: 100vw;
+    max-height: 60vh;
   }
   .servicesHeroText {
     font-size: clamp(1.5rem, 5vw, 2.8rem);
   }
   .nestingExperienceText {
-    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
   }
 }
 
@@ -128,19 +131,17 @@
     flex-basis: 36vh;
   }
   .nestingExperienceBox {
-    height: 10vh;
-    flex-basis: 10vh;
+    height: 72vh;
+    flex-basis: 72vh;
   }
   .centeredImage {
-    height: 54vh;
-    width: auto;
-    max-width: 100vw;
+    max-height: 65vh;
   }
   .servicesHeroText {
     font-size: clamp(1.2rem, 7vw, 2.2rem);
   }
   .nestingExperienceText {
-    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-size: clamp(1.1rem, 5vw, 1.3rem);
   }
   .therapySection {
     padding: 0 2vw;
