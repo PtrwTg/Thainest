@@ -50,6 +50,14 @@ const Navbar = () => {
                   <Link to="/" className={styles.navLink}>Home</Link>
                 </li>
                 <li className={styles.navItem}>
+                  <button className={styles.navLink} style={{background:'none',border:'none',padding:0,cursor:'pointer'}} onClick={() => {
+                    const el = document.getElementById('services-hero-section');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}>Our Services</button>
+                </li>
+                <li className={styles.navItem}>
                   <a href="#contact" className={styles.navLink}>Contact</a>
                 </li>
               </>

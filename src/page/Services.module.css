@@ -1,20 +1,29 @@
 /* Services.module.css */
 
-.servicesHeroContainer {
-  position: relative;
-  width: 100%;
-  max-width: 1920px;
-  height: 650px;
-  margin: 0;
-  padding: 0;
+.servicesHeroSection {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
   overflow: hidden;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.servicesHeroContainer {
+  flex: 0 0 36vh;
+  height: 36vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .servicesHeroImg {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -36,7 +45,7 @@
 .servicesHeroText {
   font-family: 'Black Mango', sans-serif;
   font-weight: 400;
-  font-size: clamp(2.5rem, 7vw, 96px);
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
   line-height: 100%;
   letter-spacing: 0;
   text-align: center;
@@ -48,20 +57,22 @@
 }
 
 .nestingExperienceBox {
-  width: min(90vw, 1032px);
-  min-height: 120px;
-  margin: 100px auto 0 auto;
+  flex: 0 0 10vh;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
-  box-sizing: border-box;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .nestingExperienceText {
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
-  font-size: clamp(1.5rem, 4vw, 48px);
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
   line-height: 1.1;
   letter-spacing: 0;
   text-align: center;
@@ -70,34 +81,66 @@
 }
 
 .centeredImage {
+  flex: 0 0 54vh;
+  height: 54vh;
+  width: auto;
+  max-width: 100vw;
+  min-width: 0;
+  object-fit: contain;
   display: block;
-  margin: 48px auto 0 auto;
-  max-width: 90vw;
-  width: min(90vw, 800px);
-  height: auto;
-  margin-top: 100px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .servicesHeroSection {
+    height: 100vh;
+    min-height: 100vh;
+  }
+  .servicesHeroContainer {
+    height: 36vh;
+    flex-basis: 36vh;
+  }
+  .nestingExperienceBox {
+    height: 10vh;
+    flex-basis: 10vh;
+  }
+  .centeredImage {
+    height: 54vh;
+    width: auto;
+    max-width: 100vw;
+  }
+  .servicesHeroText {
+    font-size: clamp(1.5rem, 5vw, 2.8rem);
+  }
+  .nestingExperienceText {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+  }
 }
 
 @media (max-width: 600px) {
-  .servicesHeroContainer {
-    height: 220px;
-    min-height: 180px;
+  .servicesHeroSection {
+    height: 100vh;
+    min-height: 100vh;
   }
-  .servicesHeroText {
-    font-size: clamp(1.2rem, 7vw, 32px);
-    padding: 0 8px;
+  .servicesHeroContainer {
+    height: 36vh;
+    flex-basis: 36vh;
   }
   .nestingExperienceBox {
-    width: 96vw;
-    min-height: 80px;
-    margin: 12px auto 0 auto;
-    padding: 8px 4vw;
-    border-radius: 10px;
+    height: 10vh;
+    flex-basis: 10vh;
+  }
+  .centeredImage {
+    height: 54vh;
+    width: auto;
+    max-width: 100vw;
+  }
+  .servicesHeroText {
+    font-size: clamp(1.2rem, 7vw, 2.2rem);
   }
   .nestingExperienceText {
-    font-size: 1.1rem;
-    padding: 0;
-    word-break: break-word;
+    font-size: clamp(1rem, 4vw, 1.3rem);
   }
   .therapySection {
     padding: 0 2vw;

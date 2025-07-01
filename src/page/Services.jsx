@@ -14,7 +14,7 @@ import img9 from './9.svg';
 import img10 from './10.svg';
 import img11 from './11.svg';
 import img4img2 from './4img2.svg';
-import Contact from './Contact';
+import Contact from '../components/Contact/Contact';
 import { useCallback } from 'react';
 import bg2 from './BG2.svg';
 
@@ -76,29 +76,31 @@ const Services = () => {
       <div className={styles.bgWrapper}>
         <img src={bg2} alt="background" className={styles.bgImage} />
       </div>
-      <div className={styles.servicesHeroContainer}>
-        <img
-          src={servicesImg}
-          alt="Our Services"
-          className={styles.servicesHeroImg}
-        />
-        <div className={styles.servicesHeroTextWrapper}>
-          <span className={styles.servicesHeroText}>
-            Our Services
+      <div className={styles.servicesHeroSection} id="services-hero-section">
+        <div className={styles.servicesHeroContainer}>
+          <img
+            src={servicesImg}
+            alt="Our Services"
+            className={styles.servicesHeroImg}
+          />
+          <div className={styles.servicesHeroTextWrapper}>
+            <span className={styles.servicesHeroText}>
+              Our Services
+            </span>
+          </div>
+        </div>
+        <div className={styles.nestingExperienceBox}>
+          <span className={styles.nestingExperienceText}>
+            Book Your Nesting Experience today and step<br />
+            into a space of peace and healing.
           </span>
         </div>
+        <img
+          src={img4}
+          alt="4img"
+          className={styles.centeredImage}
+        />
       </div>
-      <div className={styles.nestingExperienceBox}>
-        <span className={styles.nestingExperienceText}>
-          Book Your Nesting Experience today and step<br />
-          into a space of peace and healing.
-        </span>
-      </div>
-      <img
-        src={img4}
-        alt="4img"
-        className={styles.centeredImage}
-      />
 
       {/* Section Massage Therapy */}
       <section className={styles.therapySection}>
