@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Slider from './components/Slider/Slider';
 import Aboutus from './components/Aboutus/Aboutus';
-import BlogSection from './components/blog/BlogSection';
+import BlogSection from './components/Blog/BlogSection';
 import Contact from './page/Contact';
 import { Routes, Route } from 'react-router-dom';
 import Services from './page/Services';
