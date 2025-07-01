@@ -91,7 +91,7 @@ const Services = () => {
         </div>
         <div className={styles.nestingExperienceBox}>
           <span className={styles.nestingExperienceText}>
-            Book Your Nesting Experience today and step<br />
+            Book Your Nesting Experience today and step
             into a space of peace and healing.
           </span>
           <img
@@ -103,7 +103,7 @@ const Services = () => {
       </div>
 
       {/* Section Massage Therapy */}
-      <section className={styles.therapySection}>
+      <section className={styles.therapySection} id="therapy-section">
         <h2 className={styles.therapyTitle}>Massage Therapy</h2>
         <div className={styles.cardList}>
           {cardData.map((card, idx) => (
@@ -118,7 +118,7 @@ const Services = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Book Your Nesting Experience
+                  Book Nesting Experience
                 </a>
               </div>
             </div>

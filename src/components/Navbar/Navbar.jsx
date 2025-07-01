@@ -58,6 +58,24 @@ const Navbar = () => {
                   }}>Our Services</button>
                 </li>
                 <li className={styles.navItem}>
+                  <button className={styles.navLink} style={{background:'none',border:'none',padding:0,cursor:'pointer'}} onClick={() => {
+                    if (location.pathname !== '/services') {
+                      navigate('/services');
+                      setTimeout(() => {
+                        const el = document.getElementById('therapy-section');
+                        if (el) {
+                          el.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }, 200);
+                    } else {
+                      const el = document.getElementById('therapy-section');
+                      if (el) {
+                        el.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }
+                  }}>Massage Therapy</button>
+                </li>
+                <li className={styles.navItem}>
                   <a href="#contact" className={styles.navLink}>Contact</a>
                 </li>
               </>
