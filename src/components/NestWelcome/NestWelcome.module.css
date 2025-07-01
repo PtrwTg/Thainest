@@ -118,21 +118,44 @@
 }
 @media (max-width: 600px) {
   .homeContainer {
-    height: 82vh;
-    padding: 0.2rem 0 0.2rem 0;
+    height: 68vh;
+    padding: 0.1rem 0 0.1rem 0;
   }
   .welcomeTitle {
-    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
   }
   .welcomeSubtitle, .welcomeDescription {
-    font-size: clamp(0.6rem, 2vw, 0.7rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+  .combinedImgContainer {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.7rem 0 0.7rem 0;
+    min-height: 120px;
   }
   .combinedImg {
-    width: min(90vw, 100px);
+    width: min(90vw, 180px);
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
   }
   .bookButton, .viewAllButton {
-    font-size: clamp(0.6rem, 1vw, 0.7rem);
-    height: clamp(1.2rem, 4vw, 1.5rem);
-    padding: 0.2rem 0.7rem;
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
+    height: clamp(2rem, 6vw, 2.3rem);
+    width: clamp(10rem, 60vw, 16rem);
+    min-width: 140px;
+    padding: 0.3rem 1.2rem;
+    margin: 0.7rem 0 0.7rem 0;
+    white-space: nowrap;
+    line-height: 1.2;
+    word-break: normal;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 } 

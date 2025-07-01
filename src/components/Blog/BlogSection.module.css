@@ -26,20 +26,21 @@
   margin-left: 2vw;
   text-align: right;
   margin-bottom: 0;
+  
 }
 .envMango {
   color: #E5C177;
   font-weight: 700;
 }
 .interiorRow {
-  height: 40vh;
+  height: 35vh;
   background: #E5C177;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2vw 6vw 0 6vw;
-  gap: 2vh;
+  padding: 0vw 6vw 0 6vw;
+  gap: 1vh;
 }
 .interiorText, .interiorTextSecondary {
   font-family: 'Quicksand', sans-serif;
@@ -61,7 +62,7 @@
   object-fit: contain;
   border-radius: 1.5vw;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  margin-top: 2vh;
+  margin-top: 0vh;
   align-self: center;
 }
 @media (max-width: 900px) {
@@ -112,7 +113,7 @@
 }
 .blogBottomSection {
   background: #A9B591;
-  height: 50vh;
+  height: 55vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -255,7 +256,7 @@
   color: #fff;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
-  margin: 2vh auto;
+  margin: 3vh auto;
   margin-top: 1vh;
 }
 .bookButton:hover {
