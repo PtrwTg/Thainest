@@ -5,6 +5,7 @@ import blogicon from './blogicon.svg';
 import blog1 from './blog1.svg';
 import blog2 from './blog2.svg';
 import blog3 from './blog3.svg';
+import flower from './flower.svg';
 
 const BlogSection = () => {
   const sliderRef = useRef(null);
@@ -31,6 +32,8 @@ const BlogSection = () => {
 
   return (
     <div className={styles.blogSectionContainer} id="blog">
+      {/* Flower background decoration */}
+      <img src={flower} alt="Flower Decoration" className={styles.blogFlowerBg} aria-hidden="true" />
       {/* 10% Top: Environment Text */}
       <div className={styles.envRow}>
         <div className={styles.envText}>
@@ -52,45 +55,22 @@ const BlogSection = () => {
         <img src={blogicon} alt="Blog Icon" className={styles.blogIcon} />
         <div className={styles.blogTitle}>Wellness Journal</div>
         <div className={styles.blogSliderWrapper}>
-          <div
-            className={styles.blogSlider}
-            ref={sliderRef}
-            onMouseEnter={() => handleSliderHover(true)}
-            onMouseLeave={() => handleSliderHover(false)}
-          >
-            <a
-              href="https://www.health.com/thai-massage-7814435"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.blogSliderItem}
-              onMouseEnter={(e) => handleMouseEnter(e, "Benefits of Thai Massage")}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-            >
+          <div className={styles.blogGrid}>
+            <div className={styles.blogCard}>
               <img src={blog1} alt="Benefits of Thai Massage" className={styles.blogImg} />
-            </a>
-            <a
-              href="https://www.nuadthaischool.com/the-history-and-origins-of-thai-massage/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.blogSliderItem}
-              onMouseEnter={(e) => handleMouseEnter(e, "History of Thai Massage")}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-            >
+              <div className={styles.blogCardTitle}>Benefits of Thai Massage</div>
+              <a href="https://www.health.com/thai-massage-7814435" target="_blank" rel="noopener noreferrer" className={styles.blogReadMore}>Read More</a>
+            </div>
+            <div className={styles.blogCard}>
               <img src={blog2} alt="History of Thai Massage" className={styles.blogImg} />
-            </a>
-            <a
-              href="https://www.makkhahealthandspa.com/how-to-prepare-for-a-massage/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.blogSliderItem}
-              onMouseEnter={(e) => handleMouseEnter(e, "How to Prepare for Thai Massage")}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-            >
+              <div className={styles.blogCardTitle}>History of Thai Massage</div>
+              <a href="https://www.nuadthaischool.com/the-history-and-origins-of-thai-massage/" target="_blank" rel="noopener noreferrer" className={styles.blogReadMore}>Read More</a>
+            </div>
+            <div className={styles.blogCard}>
               <img src={blog3} alt="How to Prepare for Thai Massage" className={styles.blogImg} />
-            </a>
+              <div className={styles.blogCardTitle}>How to Prepare for Thai Massage</div>
+              <a href="https://www.makkhahealthandspa.com/how-to-prepare-for-a-massage/" target="_blank" rel="noopener noreferrer" className={styles.blogReadMore}>Read More</a>
+            </div>
           </div>
         </div>
         {/* Tooltip แสดงหัวข้อ blog ที่ตำแหน่งเมาส์ */}
@@ -123,7 +103,7 @@ const BlogSection = () => {
           <div className={styles.reconnectDesc}>
             Book Your Nesting Experience today and step into a space of peace and healing.
           </div>
-          <button className={styles.bookButton} onClick={() => window.open('https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ==', '_blank', 'noopener,noreferrer')}>Book Your Nesting Experience</button>
+          <button className={styles.bookButton} onClick={() => window.open('https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ==', '_blank', 'noopener,noreferrer')}>Book Nesting Experience</button>
         </div>
       </div>
     </div>

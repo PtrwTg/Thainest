@@ -1,0 +1,258 @@
+.contactSection {
+  width: 100%;
+  height: 50vh;
+  min-height: 340px;
+  background: #798D70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactContentWrapper {
+  width: 90vw;
+  max-width: 1100px;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5vw;
+}
+.contactLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #fff;
+  z-index: 1;
+}
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1.2rem;
+  opacity: 1;
+  position: static;
+  pointer-events: auto;
+  z-index: 1;
+}
+.logoLarge {
+  width: 14vw;
+  min-width: 6rem;
+  max-width: 18vw;
+  height: auto;
+  opacity: 1;
+  position: static;
+  pointer-events: auto;
+  z-index: 1;
+  display: block;
+}
+.contactTitle {
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  margin-bottom: 2vh;
+  letter-spacing: 0.02em;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+  z-index: 1;
+  margin-top: 0.5vh;
+}
+.contactRow:hover {
+  color: #E5C177;
+}
+.fbLink {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 500;
+}
+.fbLink:hover {
+  color: #E5C177;
+  text-decoration: underline;
+}
+.iconCircle {
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  color: #fff;
+  font-size: 1.1em;
+  min-width: 1.2em;
+}
+
+.contactLeft .contactRow span {
+  color: #fff;
+}
+.contactRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #E5C177;
+  z-index: 1;
+}
+.operationTitle {
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  margin-bottom: 2vh;
+  letter-spacing: 0.02em;
+  color: #E5C177;
+  text-align: center;
+}
+.operationRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 500;
+  margin-bottom: 1vh;
+  gap: 1vw;
+  color: #E5C177;
+}
+.day {
+  text-align: left;
+  flex: 1;
+}
+.time {
+  text-align: right;
+  flex: 1;
+}
+.operationNote {
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  font-weight: 500;
+  margin: 2vh 0 2vh 0;
+  color: #E5C177;
+  text-align: center;
+}
+.logoRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  margin-top: auto;
+  align-items: flex-end;
+  justify-content: center;
+}
+.logoRowLarge {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  margin-top: auto;
+  align-items: flex-end;
+  justify-content: center;
+}
+.antaLogo, .hicapsLogo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+}
+.partnerLogoLarge {
+  height: 9vw;
+  min-height: 3rem;
+  max-height: 8vw;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+}
+@media (max-width: 900px) {
+  .contactSection {
+    min-height: 60vh;
+    padding: 4vw 0 4vw 0;
+  }
+  .contactContentWrapper {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 2vw;
+  }
+  .contactLeft, .contactRight {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.5vw;
+  }
+  .logoLarge {
+    width: 22vw;
+    min-width: 5rem;
+    margin-bottom: 2vw;
+  }
+  .logoRowLarge {
+    gap: 2vw;
+    margin-top: 2vw;
+  }
+  .partnerLogoLarge {
+    height: 10vw;
+    min-height: 2rem;
+    max-height: 8vw;
+  }
+  .contactTitle, .operationTitle {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+  .contactRow, .operationRow, .fbLink {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+  .operationNote {
+    font-size: clamp(0.85rem, 1.5vw, 0.98rem);
+    margin: 2vw 0 2vw 0;
+  }
+}
+@media (max-width: 600px) {
+  .contactSection {
+    min-height: 50vh;
+    padding: 6vw 0 6vw 0;
+  }
+  .contactContentWrapper {
+    width: 99vw;
+    max-width: 99vw;
+    gap: 2vw;
+  }
+  .contactLeft, .contactRight {
+    margin-bottom: 3vw;
+  }
+  .logoLarge {
+    width: 32vw;
+    min-width: 3.5rem;
+    margin-bottom: 2vw;
+  }
+  .logoRowLarge {
+    gap: 1vw;
+    margin-top: 3vw;
+  }
+  .partnerLogoLarge {
+    height: 16vw;
+    min-height: 1.2rem;
+    max-height: 12vw;
+  }
+  .contactTitle, .operationTitle {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+  }
+  .contactRow, .operationRow, .fbLink {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+  }
+  .operationNote {
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    margin: 2vw 0 2vw 0;
+  }
+} 
