@@ -170,6 +170,9 @@
     font-size: clamp(0.9rem, 2vw, 1.05rem);
     line-height: 1.5;
     margin-top: clamp(1vh, 2vw, 2vh);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 1.5vh;
   }
   .candleImgContainer {
     height: 22vh;
@@ -185,6 +188,9 @@
     font-size: clamp(0.9rem, 2vw, 1.05rem);
     line-height: 1.5;
     margin-top: clamp(1vh, 2vw, 2vh);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 1.5vh;
   }
   .servicesImagesRow {
     height: 23vh;
@@ -218,6 +224,9 @@
   }
   .nurturingDesc {
     font-size: clamp(0.8rem, 2vw, 0.95rem);
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-bottom: 2vh;
   }
   .candleImgContainer {
     height: 16vh;
@@ -230,6 +239,9 @@
   }
   .servicesDesc {
     font-size: clamp(0.8rem, 2vw, 0.95rem);
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-bottom: 2vh;
   }
   .servicesImagesRow {
     height: 20vh;
