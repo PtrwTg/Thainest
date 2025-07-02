@@ -255,7 +255,7 @@
     overflow: hidden;
   }
   .serviceCard {
-    margin: 0 0.5vw;
+    margin: 0 5vw;
   }
   .serviceImg {
     width: 36vw;
@@ -265,7 +265,7 @@
   .serviceBtn {
     font-size: clamp(0.7rem, 1.5vw, 0.85rem);
     height: 3.2vh;
-    width: 22vw;
+    width: 30vw;
     min-width: 4rem;
     padding: 0.2em 0.6em;
   }
