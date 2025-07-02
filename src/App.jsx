@@ -16,10 +16,11 @@ const App = () => {
         <Route path="/" element={
           <>
             <Slider />
-              <NestWelcome />
-              <Aboutus />
-              <BlogSection />
-              <Contact />
+            <NestWelcome />
+            <div className="homeSafeArea" />
+            <Aboutus />
+            <BlogSection />
+            <Contact />
           </>
         } />
         <Route path="/services" element={<Services />} />

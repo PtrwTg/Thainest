@@ -63,16 +63,20 @@
 
 .nestingExperienceBox {
   flex: 0 0 64vh;
-  height: 64vh;
-  margin: 0;
-  padding: 0;
+  height: auto;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  gap: 6vh;
   background: none;
   box-shadow: none;
   border-radius: 0;
+}
+
+.nestingExperienceBox .centeredImage {
+  margin-top: 0;
 }
 
 .nestingExperienceText {
@@ -88,13 +92,26 @@
 }
 
 .centeredImage {
-  width: auto;
-  max-width: 100%;
+  width: 48vw;
+  max-width: 600px;
   height: auto;
-  max-height: 55vh;
+  max-height: 28vh;
+  object-fit: contain;
   display: block;
-  margin: 1vh auto;
-  padding: 1%;
+  margin: 0 auto;
+  transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.centeredImage:hover, .centeredImage:focus {
+  transform: scale(1.12);
+  z-index: 2;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.18);
+}
+
+.nestingExperienceBox > div {
+  gap: 0.5vw !important;
 }
 
 @media (max-width: 900px) {
@@ -110,14 +127,19 @@
     height: 68vh;
     flex-basis: 68vh;
   }
-  .centeredImage {
-    max-height: 60vh;
+  .centeredImage, .facialImage {
+    width: 60vw;
+    max-width: 320px;
+    max-height: 20vh;
   }
   .servicesHeroText {
     font-size: clamp(1.5rem, 5vw, 2.8rem);
   }
   .nestingExperienceText {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+  .nestingExperienceBox > div {
+    gap: 1vw !important;
   }
 }
 
@@ -138,12 +160,10 @@
     justify-content: flex-start;
     align-items: center;
   }
-  .centeredImage {
-    max-height: 65vh;
-    width: auto;
-    margin: 0 auto;
-    margin-top: auto;
-    display: block;
+  .centeredImage, .facialImage {
+    width: 90vw;
+    max-width: 260px;
+    max-height: 18vh;
   }
   .servicesHeroText {
     font-size: clamp(1.2rem, 7vw, 2.2rem);
@@ -196,6 +216,11 @@
     gap: 4px !important;
     margin-bottom: 0 !important;
   }
+  .nestingExperienceBox > div {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2vw !important;
+  }
 }
 
 .therapySection {
@@ -216,14 +241,12 @@
 }
 
 .therapyTitle {
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
   font-family: 'Black Mango', sans-serif;
   font-weight: 400;
-  font-size: clamp(1.2rem, 4vw, 2.2rem);
-  line-height: 100%;
-  letter-spacing: 0;
   color: #798D70;
-  text-align: left;
-  margin-bottom: 64px;
+  margin: 0 0 12px 0;
+  text-align: center;
 }
 
 .cardList {
@@ -248,12 +271,18 @@
   min-width: 180px;
   min-height: 120px;
   margin: 1vw auto;
-  padding: 12px 16px;
+  padding: 16px 20px;
   border-radius: 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+  transition: box-shadow 0.18s, transform 0.18s;
   gap: 16px;
   box-sizing: border-box;
+  border: 1px solid #eee;
+}
+
+.therapyCard:hover, .therapyCard:focus {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.18);
 }
 
 .cardImg {
@@ -290,7 +319,10 @@
 .cardBtn {
   font-size: 0.9rem;
   padding: 4px 12px;
-  border-radius: 12px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
   background: #E6CCD1;
   color: #798D70;
   border: none;
@@ -298,7 +330,7 @@
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.25s, border 0.25s, color 0.25s, box-shadow 0.18s, transform 0.18s;
+  transition: background 0.25s, border 0.25s, color 0.25s, box-shadow 0.18s;
   outline: none;
   margin-top: 4px;
   text-align: left;
@@ -377,28 +409,34 @@
 
 .facialSection {
   width: 100%;
-  max-width: 1920px;
-  margin: 300px auto 0 auto;
-  padding: 0 16px;
+  min-height: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: var(--navbar-height, 8vh);
+  scroll-margin-top: var(--navbar-height, 8vh);
+  box-sizing: border-box;
 }
 
 .facialTitle {
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
   font-family: 'Black Mango', sans-serif;
   font-weight: 400;
-  font-size: 96px;
-  line-height: 100%;
-  letter-spacing: 0;
-  text-align: center;
   color: #798D70;
-  margin-bottom: 48px;
+  margin: 0 0 12px 0;
+  text-align: center;
 }
 
 .facialImage {
-  display: block;
-  margin: 150px auto 150px auto;
-  max-width: 90vw;
-  width: min(90vw, 800px);
-  height: auto;
+  width: 80vw !important;
+  max-width: 140px !important;
+  height: auto !important;
+  max-height: 8vh !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 .facialCardList {
@@ -469,7 +507,34 @@
     max-width: 420px;
   }
   .facialTitle {
-    font-size: 40px;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+  .facialImage, .centeredImage {
+    max-height: 45vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .facialSection {
+    min-height: 100vh;
+    height: 100vh;
+    padding-top: var(--navbar-height, 12vh);
+  }
+  .facialTitle {
+    font-size: clamp(0.95rem, 6vw, 1.1rem);
+  }
+  .facialImage, .centeredImage {
+    max-height: 38vh;
+  }
+  .facialCardList {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .facialCard {
+    width: 95vw;
+    min-width: 0;
+    max-width: 420px;
   }
 }
 

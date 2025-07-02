@@ -1,6 +1,6 @@
 /* Responsive & Quicksand only */
 .homeContainer {
-  height: 64vh;
+  height: 59vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -109,7 +109,7 @@
 
 @media (max-width: 900px) {
   .homeContainer {
-    height: 75vh;
+    height: 70vh;
     padding: 0.4rem 0 0.4rem 0;
   }
   .combinedImg {
@@ -118,7 +118,7 @@
 }
 @media (max-width: 600px) {
   .homeContainer {
-    height: 68vh;
+    height: 63vh;
     padding: 0.1rem 0 0.1rem 0;
   }
   .welcomeTitle {
@@ -158,4 +158,11 @@
     justify-content: center;
     overflow: hidden;
   }
+}
+
+.homeContainerSpacer {
+  height: 5vh;
+  width: 100%;
+  background: transparent;
+  display: block;
 } 

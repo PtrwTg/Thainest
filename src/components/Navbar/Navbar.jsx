@@ -76,6 +76,14 @@ const Navbar = () => {
                   }}>Massage Therapy</button>
                 </li>
                 <li className={styles.navItem}>
+                  <button className={styles.navLink} style={{background:'none',border:'none',padding:0,cursor:'pointer'}} onClick={() => {
+                    const el = document.getElementById('treatments-section');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}>Treatments</button>
+                </li>
+                <li className={styles.navItem}>
                   <a href="#contact" className={styles.navLink}>Contact</a>
                 </li>
               </>

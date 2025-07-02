@@ -94,11 +94,20 @@ const Services = () => {
             Book Your Nesting Experience today and step
             into a space of peace and healing.
           </span>
-          <img
-            src={img4}
-            alt="4img"
-            className={styles.centeredImage}
-          />
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2vw', width: '100%' }}>
+            <img
+              src={img4}
+              alt="Massage Therapy"
+              className={styles.centeredImage}
+              title="Massage Therapy"
+            />
+            <img
+              src={img4img2}
+              alt="Treatments"
+              className={styles.centeredImage}
+              title="Treatments"
+            />
+          </div>
         </div>
       </div>
 
@@ -127,9 +136,9 @@ const Services = () => {
       </section>
 
       {/* Section Facial Treatments */}
-      <section className={styles.facialSection}>
-        <h2 className={styles.facialTitle}>Facial Treatments</h2>
-        <img src={img4img2} alt="Facial Treatments" className={styles.facialImage} />
+      <section className={styles.facialSection} id="treatments-section">
+        <h2 className={styles.facialTitle}>Treatments</h2>
+        {/* <img src={img4img2} alt="Treatments" className={styles.centeredImage} /> */}
         <div className={styles.cardList}>
           <div className={styles.therapyCard}>
             <img src={img9} alt="Deep Cleansing Facial" className={styles.cardImg} />
