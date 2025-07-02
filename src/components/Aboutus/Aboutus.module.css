@@ -3,12 +3,13 @@
   position: relative;
   width: 100%;
   min-height: 0;
-  height: 25vh;
+  height: 23vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #798D70;
   overflow: hidden;
+  padding-top: 6vh;
 }
 .nurturingSection::before {
   content: '';
@@ -25,7 +26,6 @@
   line-height: 1.1;
   text-align: center;
   color: #EEE6DC;
-  margin-top: clamp(5vh, 8vw, 7vh);
   position: relative;
   z-index: 2;
 }
@@ -50,7 +50,7 @@
   justify-content: center;
   align-items: center;
   background: #eee6dc;
-  height: 24vh;
+  height: 23vh;
 }
 .candleImg {
   width: 100%;
@@ -66,7 +66,7 @@
   background: #798D70 url('./Oppa1.svg');
   border-bottom-right-radius: 15vw;
   border-bottom-left-radius: 15vw;
-  height: 24vh;
+  height: 23vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,7 +103,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 26vh;
   position: relative;
   z-index: 10;
 }
@@ -153,46 +153,18 @@
   text-decoration: underline;
   text-decoration-color: #A9B591;
 }
-
-.envSection {
+.aboutusFreeSpace {
+  height: 5vh;
   width: 100%;
-  min-height: 0;
-  height: 12vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  position: relative;
-  margin-top: 0;
-}
-.envText {
-  margin: 0 2vw 1vw 0;
-  text-align: right;
   display: block;
-  width: 100%;
-  justify-content: flex-end;
 }
-.envNormal, .envMango {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
-  font-size: clamp(1.2rem, 4vw, 2.5rem);
-  line-height: 1.1;
-  color: #798D70;
-}
-
-.aboutusSpacer {
-  min-height: 27vh;
-  height: 27vh;
-  width: 100%;
-  padding-top: 3vh;
-}
-
 @media (max-width: 900px) {
   .nurturingSection {
-    height: 30vh;
+    height: 28vh;
+    padding-top: 5vh;
   }
   .nurturingTitle {
     font-size: clamp(1rem, 3vw, 1.2rem);
-    margin-top: clamp(4vh, 6vw, 5vh);
   }
   .nurturingDesc {
     font-size: clamp(0.9rem, 2vw, 1.05rem);
@@ -200,129 +172,89 @@
     margin-top: clamp(1vh, 2vw, 2vh);
   }
   .candleImgContainer {
-    height: 18vh;
+    height: 22vh;
   }
   .servicesCurvedBox {
-    height: 30vh;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+    height: 22vh;
   }
   .servicesTitle {
-    font-size: clamp(1.05rem, 3vw, 1.2rem);
-    margin-top: 1vh;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-top: clamp(1vh, 2vw, 2vh);
   }
   .servicesDesc {
     font-size: clamp(0.9rem, 2vw, 1.05rem);
     line-height: 1.5;
-    margin-top: 1vh;
-    max-width: 92%;
-  }
-  .aboutusSpacer {
-    min-height: 22vh;
-    height: 22vh;
-    padding-top: 2vh;
+    margin-top: clamp(1vh, 2vw, 2vh);
   }
   .servicesImagesRow {
-    gap: 5vw;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 0vh;
+    height: 23vh;
+    gap: 2vw;
   }
   .serviceCard {
-    margin: 0 2vw;
+    margin: 0 1vw;
   }
   .serviceImg {
-    width: min(32vw, 140px);
-    max-width: 140px;
-    height: 14vw;
-    min-height: 80px;
-    max-height: 110px;
-    border-radius: 2vw;
+    width: 40vw;
+    max-width: 120px;
+    height: 14vh;
   }
   .serviceBtn {
-    width: min(24vw, 110px);
-    min-width: 90px;
-    height: 2.1rem;
-    font-size: clamp(1rem, 2vw, 1.1rem);
-    padding: 0.2em 0.8em;
-    margin-top: 1vh;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 22vw;
+    min-width: 6rem;
+    height: 5vh;
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
   }
-  .envSection {
-    height: 8vh;
+  .aboutusFreeSpace {
+    height: 5vh;
   }
 }
 @media (max-width: 600px) {
   .nurturingSection {
-    height: 28vh;
+    height: 26vh;
+    padding-top: 5vh;
   }
   .nurturingTitle {
-    font-size: clamp(0.9rem, 3vw, 1.05rem);
-    margin-top: clamp(7vh, 4vw, 3vh);
+    font-size: clamp(1rem, 4vw, 1.1rem);
   }
   .nurturingDesc {
-    font-size: clamp(0.8rem, 2vw, 0.95rem);
-    line-height: 1.6;
-    margin-top: clamp(0.5vh, 1vw, 1vh);
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.5;
+    margin-top: clamp(1vh, 2vw, 2vh);
   }
   .candleImgContainer {
-    height: 14vh;
+    height: 16vh;
   }
   .servicesCurvedBox {
-    height: 35vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    height: 37vh;
   }
   .servicesTitle {
-    font-size: clamp(0.95rem, 3vw, 1.1rem);
-    margin-top: 0.5vh;
+    font-size: clamp(1rem, 4vw, 1.1rem);
+    margin-top: clamp(1vh, 2vw, 2vh);
   }
   .servicesDesc {
-    font-size: clamp(0.8rem, 2vw, 0.95rem);
-    line-height: 1.6;
-    margin-top: 0.5vh;
-    max-width: 95%;
-  }
-  .aboutusSpacer {
-    min-height: 23vh;
-    height: 26vh;
-    padding-top: 1vh;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.5;
+    margin-top: clamp(1vh, 2vw, 2vh);
   }
   .servicesImagesRow {
-    gap: 4vw;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 4vh;
+    height: 20vh;
+    gap: 1vw;
   }
   .serviceCard {
-    margin: 0 2vw;
+    margin: 0 0.5vw;
   }
   .serviceImg {
-    width: min(40vw, 120px);
-    max-width: 120px;
-    height: 18vw;
-    min-height: 60px;
-    max-height: 90px;
-    border-radius: 3vw;
+    width: 44vw;
+    max-width: 100px;
+    height: 10vh;
   }
   .serviceBtn {
-    width: min(32vw, 120px);
-    min-width: 90px;
-    height: 2.2rem;
-    font-size: clamp(0.9rem, 2vw, 1.05rem);
-    padding: 0.2em 0.7em;
-    margin-top: 0.5vh;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 28vw;
+    min-width: 5rem;
+    height: 4vh;
+    font-size: clamp(0.7rem, 2vw, 1rem);
   }
-  .envSection {
-    height: 6vh;
+  .aboutusFreeSpace {
+    height: 5vh;
   }
 }
