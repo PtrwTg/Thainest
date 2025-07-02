@@ -40,6 +40,7 @@
   position: relative;
   z-index: 2;
   margin-top: clamp(1vh, 2vw, 2vh);
+  padding-bottom: 2vh;
 }
 
 .candleImgContainer {
@@ -73,7 +74,7 @@
   padding-top: clamp(1vh, 2vw, 2vh);
   padding-bottom: clamp(1vh, 2vw, 2vh);
   box-sizing: border-box;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
 }
 .servicesTitle {
@@ -83,7 +84,6 @@
   line-height: 1.1;
   text-align: center;
   color: #EEE6DC;
-  margin-top: clamp(1vh, 2vw, 2vh);
 }
 .servicesDesc {
   font-family: 'Quicksand', sans-serif;
@@ -94,6 +94,7 @@
   color: #EEE6DC;
   max-width: 80%;
   margin-top: clamp(1vh, 2vw, 2vh);
+  padding-bottom: 5vh;
 }
 
 .servicesImagesRow {
@@ -106,6 +107,7 @@
   height: 26vh;
   position: relative;
   z-index: 10;
+  overflow: hidden;
 }
 .serviceCard {
   display: flex;
@@ -160,8 +162,9 @@
 }
 @media (max-width: 900px) {
   .nurturingSection {
-    height: 28vh;
-    padding-top: 5vh;
+    height: 27vh;
+    padding-top: 6vh;
+    overflow: hidden;
   }
   .nurturingTitle {
     font-size: clamp(1rem, 3vw, 1.2rem);
@@ -175,14 +178,13 @@
     padding-bottom: 1.5vh;
   }
   .candleImgContainer {
-    height: 22vh;
+    height: 19vh;
   }
   .servicesCurvedBox {
-    height: 22vh;
+    height: 35vh;
   }
   .servicesTitle {
     font-size: clamp(1rem, 3vw, 1.2rem);
-    margin-top: clamp(1vh, 2vw, 2vh);
   }
   .servicesDesc {
     font-size: clamp(0.9rem, 2vw, 1.05rem);
@@ -193,8 +195,9 @@
     padding-bottom: 1.5vh;
   }
   .servicesImagesRow {
-    height: 23vh;
+    height: 19vh;
     gap: 2vw;
+    overflow: hidden;
   }
   .serviceCard {
     margin: 0 1vw;
@@ -202,7 +205,7 @@
   .serviceImg {
     width: 40vw;
     max-width: 120px;
-    height: 14vh;
+    height: 10vh;
   }
   .serviceBtn {
     width: 22vw;
@@ -211,13 +214,14 @@
     font-size: clamp(0.7rem, 1.5vw, 1rem);
   }
   .aboutusFreeSpace {
-    height: 5vh;
+    height: 0vh;
   }
 }
 @media (max-width: 600px) {
   .nurturingSection {
-    height: 26vh;
-    padding-top: 5vh;
+    height: 30vh;
+    padding-top: 6vh;
+    overflow: hidden;
   }
   .nurturingTitle {
     font-size: clamp(0.9rem, 2.5vw, 1rem);
@@ -230,9 +234,11 @@
   }
   .candleImgContainer {
     height: 16vh;
+    overflow: hidden;
   }
   .servicesCurvedBox {
     height: 37vh;
+    overflow: hidden;
   }
   .servicesTitle {
     font-size: clamp(0.9rem, 2vw, 1rem);
@@ -246,6 +252,7 @@
   .servicesImagesRow {
     height: 20vh;
     gap: 1vw;
+    overflow: hidden;
   }
   .serviceCard {
     margin: 0 0.5vw;
