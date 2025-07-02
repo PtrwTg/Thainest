@@ -52,6 +52,7 @@ const Aboutus = () => {
             <button className={styles.serviceBtn} onClick={() => window.location.href='/services'}>Treatments</button>
           </div>
         </div>
+        <div className={styles.aboutusFreeSpace}></div>
       </div>
   );
 };
