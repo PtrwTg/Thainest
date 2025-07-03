@@ -103,10 +103,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.2vw;
   }
-  .blogImg {
-    max-width: 110px;
-    height: 70px;
-  }
   .blogCard {
     padding: 0.6rem 0.3rem;
   }
@@ -152,10 +148,6 @@
   }
   .blogSliderWrapper {
     max-width: 98vw;
-  }
-  .blogImg {
-    max-width: 90px;
-    height: 55px;
   }
   .blogCard {
     min-height: 170px;
@@ -258,12 +250,14 @@
 }
 .blogImg {
   width: 100%;
-  max-width: 140px;
-  height: 90px;
+  max-width: 100px; /* ลดลงจากเดิม 140px */
+  height: 64px;     /* ลดลงจากเดิม 90px */
   object-fit: cover;
   border-radius: 0.7rem;
   margin-bottom: 0.5rem;
+  margin-top: 10px;
 }
+
 .blogCardTitle {
   font-size: 0.98rem;
   margin-bottom: 0.4rem;
@@ -348,3 +342,10 @@
   border: 2px solid #e6ccd1;
 }
 
+@media (max-width: 600px) {
+  .blogImg {
+    max-width: 80px; /* ลดลงจากเดิม 90px */
+    height: 50px;     /* ลดลงจากเดิม 55px */
+    margin-top: 10px;
+  }
+}

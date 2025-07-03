@@ -81,7 +81,7 @@
 }
 
 .nestingExperienceText {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', 'Quicksand';
   font-weight: 500;
   font-size: clamp(1rem, 3vw, 1.4rem);
   line-height: 1.1;
@@ -325,12 +325,14 @@
   font-weight: 500;
   color: #798D70;
   margin-bottom: 2px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .cardDesc {
   font-size: 0.92rem;
   color: #333;
   margin-bottom: 6px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .cardBtn {
