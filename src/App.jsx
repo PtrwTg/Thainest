@@ -40,6 +40,7 @@ const imagesToPreload = [
   '/src/components/Contact/Anta.svg',
   '/src/components/Contact/Hicap.svg',
   '/src/components/Contact/LogoThaiNest.svg',
+  '/src/components/Navbar/LogoThaiNest.svg',
   '/src/components/Slider/slide1.svg',
   '/src/components/Slider/slide2.svg',
   '/src/components/Slider/slide3.svg',
