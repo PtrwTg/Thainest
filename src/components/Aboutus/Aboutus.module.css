@@ -253,7 +253,7 @@
   .servicesImagesRow {
     gap: 1vw;
     overflow: hidden;
-    margin-top: 2vh;
+    margin-top: 1vh;
   }
   .serviceCard {
     margin: 0 5vw;
