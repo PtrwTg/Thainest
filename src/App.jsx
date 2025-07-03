@@ -7,11 +7,13 @@ import Contact from './components/Contact/Contact';
 import { Routes, Route } from 'react-router-dom';
 import Services from './page/Services';
 import NestWelcome from './components/NestWelcome/NestWelcome';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
     <div>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={
           <>

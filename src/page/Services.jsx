@@ -77,20 +77,20 @@ const Services = () => {
         <img src={bg2} alt="background" className={styles.bgImage} />
       </div>
       <div className={styles.servicesHeroSection} id="services-hero-section">
-        <div className={styles.servicesHeroContainer}>
+        <div className={styles.servicesHeroContainer + ' ' + styles.fadeSlideIn}>
           <img
             src={servicesImg}
             alt="Our Services"
-            className={styles.servicesHeroImg}
+            className={styles.servicesHeroImg + ' ' + styles.fadeSlideIn}
           />
-          <div className={styles.servicesHeroTextWrapper}>
-            <span className={styles.servicesHeroText}>
+          <div className={styles.servicesHeroTextWrapper + ' ' + styles.fadeSlideIn}>
+            <span className={styles.servicesHeroText + ' ' + styles.fadeSlideIn}>
               Our Services
             </span>
           </div>
         </div>
-        <div className={styles.nestingExperienceBox}>
-          <span className={styles.nestingExperienceText}>
+        <div className={styles.nestingExperienceBox + ' ' + styles.fadeSlideIn}>
+          <span className={styles.nestingExperienceText + ' ' + styles.fadeSlideIn}>
             Book Your Nesting Experience today and step
             into a space of peace and healing.
           </span>
@@ -98,14 +98,24 @@ const Services = () => {
             <img
               src={img4}
               alt="Massage Therapy"
-              className={styles.centeredImage}
+              className={styles.centeredImage + ' ' + styles.fadeSlideIn}
               title="Massage Therapy"
+              onClick={() => {
+                const el = document.getElementById('therapy-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              style={{ cursor: 'pointer' }}
             />
             <img
               src={img4img2}
               alt="Treatments"
-              className={styles.centeredImage}
+              className={styles.centeredImage + ' ' + styles.fadeSlideIn}
               title="Treatments"
+              onClick={() => {
+                const el = document.getElementById('treatments-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              style={{ cursor: 'pointer' }}
             />
           </div>
         </div>
@@ -151,7 +161,7 @@ const Services = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book Your Nesting Experience
+                Book Nesting Experience
               </a>
             </div>
           </div>
@@ -166,7 +176,7 @@ const Services = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book Your Nesting Experience
+                Book Nesting Experience
               </a>
             </div>
           </div>
@@ -181,7 +191,7 @@ const Services = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book Your Nesting Experience
+                Book Nesting Experience
               </a>
             </div>
           </div>
