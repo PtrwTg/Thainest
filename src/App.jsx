@@ -40,7 +40,6 @@ const imagesToPreload = [
   '/src/components/Contact/Anta.svg',
   '/src/components/Contact/Hicap.svg',
   '/src/components/Contact/LogoThaiNest.svg',
-  '/src/components/Navbar/LogoThaiNest.svg',
   '/src/components/Slider/slide1.svg',
   '/src/components/Slider/slide2.svg',
   '/src/components/Slider/slide3.svg',
@@ -61,8 +60,20 @@ function preloadImages(imageList) {
 
 const Loader = () => (
   <div style={{
-    width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#EEE6DC', zIndex: 9999
+    width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column',
+    justifyContent: 'center', alignItems: 'center', background: '#EEE6DC', zIndex: 9999
   }}>
+    <img
+      src="/src/components/Navbar/LogoThaiNest.svg"
+      alt="ThaiNest Logo"
+      style={{
+        width: '18vw',
+        maxWidth: 180,
+        minWidth: 80,
+        height: 'auto',
+        marginBottom: 32
+      }}
+    />
     <div style={{ fontSize: '2rem', color: '#E5C177', fontFamily: 'Quicksand, sans-serif' }}>
       Loading ThaiNest...
     </div>
