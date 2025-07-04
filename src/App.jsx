@@ -26,6 +26,7 @@ const imagesToPreload = [
   '../assets/images/11.svg',
   '../assets/images/4img2.svg',
   '../assets/images/BG2.svg',
+  '../assets/images/LogoThaiNest.svg',
   '/src/components/NestWelcome/combine.svg',
   '/src/components/Aboutus/candle.svg',
   '/src/components/Aboutus/facialmas1.svg',
@@ -65,7 +66,7 @@ const Loader = () => (
     justifyContent: 'center', alignItems: 'center', background: '#EEE6DC', zIndex: 9999
   }}>
     <img
-      src="/src/components/Navbar/LogoThaiNest.svg"
+      src="/assets/images/LogoThaiNest.svg"
       alt="ThaiNest Logo"
       style={{
         width: '18vw',
