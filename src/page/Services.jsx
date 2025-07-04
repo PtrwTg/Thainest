@@ -1,60 +1,46 @@
-import { useCallback } from 'react';
-import img1 from '../assets/images/1.svg';
-import img10 from '../assets/images/10.svg';
-import img11 from '../assets/images/11.svg';
-import img2 from '../assets/images/2.svg';
-import img3 from '../assets/images/3.svg';
-import img4svg from '../assets/images/4.svg';
-import img4 from '../assets/images/4img.svg';
-import img4img2 from '../assets/images/4img2.svg';
-import img5 from '../assets/images/5.svg';
-import img6 from '../assets/images/6.svg';
-import img7 from '../assets/images/7.svg';
-import img8 from '../assets/images/8.svg';
-import img9 from '../assets/images/9.svg';
-import bg2 from '../assets/images/BG2.svg';
-import servicesImg from '../assets/images/servicesimg.svg';
-import Contact from '../components/Contact/Contact';
+import React from 'react';
 import styles from './Services.module.css';
+import Contact from '../components/Contact/Contact';
+import { useCallback } from 'react';
 
 const cardData = [
   {
-    img: img1,
+    img: '/assets/images/1.svg',
     title: 'Thai Therapeutic Massage',
     desc: 'A dynamic blend of acupressure, assisted with stretching, and energy line work to restore balance, flexibility and deep relaxation.'
   },
   {
-    img: img2,
+    img: '/assets/images/2.svg',
     title: 'Remedial Massage',
     desc: 'Targeted therapeutic massage designed to relieve pain, improve movement, and support muscular healing.'
   },
   {
-    img: img3,
+    img: '/assets/images/3.svg',
     title: 'Aromatherapy Massage',
     desc: 'Relax with essential oils designed to soothe the senses and calm the mind.'
   },
   {
-    img: img4svg,
+    img: '/assets/images/4.svg',
     title: 'Hot Stone Massage',
     desc: 'Melt away tension with warm basalt stones placed along the body to deeply relax muscles and restore balance.'
   },
   {
-    img: img5,
+    img: '/assets/images/5.svg',
     title: 'TMJ (Temporomandibular Joint - Neck, Jaw and Scalp Area)',
     desc: 'Specialised jaw release to reduce tension, ease headaches, and improve jaw alignment and comfort.'
   },
   {
-    img: img6,
+    img: '/assets/images/6.svg',
     title: 'Indian Head Massage',
     desc: 'A calming upper-body massage with warm oil focusing on the scalp, neck, and shoulders to ease stress and enhance mental clarity.'
   },
   {
-    img: img7,
+    img: '/assets/images/7.svg',
     title: 'Abdominal Massage',
     desc: 'Gentle, focused touch to support digestion, release abdominal tension, and restore energetic flow.'
   },
   {
-    img: img8,
+    img: '/assets/images/8.svg',
     title: 'Foot Reflexology',
     desc: 'Grounding therapy that promotes balance through pressure points in the feet.'
   },
@@ -73,12 +59,12 @@ const Services = () => {
   return (
     <>
       <div className={styles.bgWrapper}>
-        <img src={bg2} alt="background" className={styles.bgImage} />
+        <img src={'/assets/images/BG2.svg'} alt="background" className={styles.bgImage} />
       </div>
       <div className={styles.servicesHeroSection} id="services-hero-section">
         <div className={styles.servicesHeroContainer + ' ' + styles.fadeSlideIn}>
           <img
-            src={servicesImg}
+            src={'/assets/images/servicesimg.svg'}
             alt="Our Services"
             className={styles.servicesHeroImg + ' ' + styles.fadeSlideIn}
           />
@@ -95,7 +81,7 @@ const Services = () => {
           </span>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2vw', width: '100%' }}>
             <img
-              src={img4}
+              src={'/assets/images/4img.svg'}
               alt="Massage Therapy"
               className={styles.centeredImage + ' ' + styles.fadeSlideIn}
               title="Massage Therapy"
@@ -106,7 +92,7 @@ const Services = () => {
               style={{ cursor: 'pointer' }}
             />
             <img
-              src={img4img2}
+              src={'/assets/images/4img2.svg'}
               alt="Treatments"
               className={styles.centeredImage + ' ' + styles.fadeSlideIn}
               title="Treatments"
@@ -147,10 +133,9 @@ const Services = () => {
       {/* Section Facial Treatments */}
       <section className={styles.facialSection} id="treatments-section">
         <h2 className={styles.facialTitle}>Treatments</h2>
-        {/* <img src={img4img2} alt="Treatments" className={styles.centeredImage} /> */}
         <div className={styles.cardList}>
           <div className={styles.therapyCard}>
-            <img src={img9} alt="Deep Cleansing Facial" className={styles.cardImg} />
+            <img src={'/assets/images/9.svg'} alt="Deep Cleansing Facial" className={styles.cardImg} />
             <div className={styles.cardContent}>
               <div className={styles.cardTitle}>Deep Cleansing Facial</div>
               <div className={styles.cardDesc}>Detoxify and hydrate for a clearer, healthier complexion.</div>
@@ -165,7 +150,7 @@ const Services = () => {
             </div>
           </div>
           <div className={styles.therapyCard}>
-            <img src={img10} alt="Soothing Sensitive Skin Treatment" className={styles.cardImg} />
+            <img src={'/assets/images/10.svg'} alt="Soothing Sensitive Skin Treatment" className={styles.cardImg} />
             <div className={styles.cardContent}>
               <div className={styles.cardTitle}>Soothing Sensitive Skin Treatment</div>
               <div className={styles.cardDesc}>Calming care for delicate skin types.</div>
@@ -180,7 +165,7 @@ const Services = () => {
             </div>
           </div>
           <div className={styles.therapyCard}>
-            <img src={img11} alt="Manual Facial Uplifting Massage" className={styles.cardImg} />
+            <img src={'/assets/images/11.svg'} alt="Manual Facial Uplifting Massage" className={styles.cardImg} />
             <div className={styles.cardContent}>
               <div className={styles.cardTitle}>Manual Facial Uplifting Massage</div>
               <div className={styles.cardDesc}>A rejuvenating facial massage using lifting techniques and Gua Sha to tone, sculpt, and refresh tired, stressed skin.</div>
@@ -207,16 +192,14 @@ const Services = () => {
           background: '#E5C177',
           borderRadius: 24,
           display: 'flex',
-          alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+          alignItems: 'center',
+          zIndex: 1000,
           cursor: 'pointer',
-          zIndex: 9999,
         }}
         onClick={handleScrollTop}
-        aria-label="Scroll to top"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="28" height="28"><path fill="#000000" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+        <svg width="24" height="24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
       </div>
     </>
   );
