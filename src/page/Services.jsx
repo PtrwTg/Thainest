@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Services.module.css';
 import Contact from '../components/Contact/Contact';
 import { useCallback } from 'react';
+import SEO from '../components/SEO/SEO';
 
 const cardData = [
   {
@@ -58,6 +59,10 @@ const Services = () => {
 
   return (
     <>
+      <SEO 
+        title="Our Services - ThaiNest Massage & Facial"
+        description="Discover our range of professional massage therapy and facial treatments. From Thai therapeutic massage to deep cleansing facials, book your nesting experience today."
+      />
       <div className={styles.bgWrapper}>
         <img src={'/assets/images/BG2.svg'} alt="background" className={styles.bgImage} />
       </div>

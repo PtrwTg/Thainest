@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import Services from './page/Services';
 import NestWelcome from './components/NestWelcome/NestWelcome';
 import ScrollToTop from './components/ScrollToTop';
+import SEO from './components/SEO/SEO';
 
 // รายการรูปภาพที่ต้อง preload (เพิ่มตามที่ใช้จริง)
 const imagesToPreload = [
@@ -95,6 +96,10 @@ const App = () => {
 
   return (
     <div>
+      <SEO 
+        title="ThaiNest Massage & Facial - Relax, Relieve, Return to Nest"
+        description="Experience authentic Thai massage and facial treatments at ThaiNest Caloundra. Professional massage therapy and skincare services in a relaxing environment."
+      />
       <Navbar />
       <ScrollToTop />
       <Routes>

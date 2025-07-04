@@ -1,9 +1,7 @@
 import { Helmet } from "react-helmet";
-import LogoThaiNest from './Navbar/LogoThaiNest.svg';
-
 
 const SEO = ({ title, description, structuredData }) => {
-  const logoUrl = window.location.origin + LogoThaiNest; 
+  const logoUrl = window.location.origin + '/assets/images/LogoThaiNest.svg'; 
 
   const defaultStructuredData = {
     "@context": "https://schema.org",
