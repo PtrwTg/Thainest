@@ -15,6 +15,14 @@ const Navbar = () => {
   // state สำหรับตรวจสอบ mouse อยู่บน navbar
   const [isHoveringNavbar, setIsHoveringNavbar] = useState(false);
 
+  // ฟังก์ชันกำหนด delay ตามอุปกรณ์
+  const getHideDelay = () => {
+    if ('ontouchstart' in window || window.matchMedia('(pointer: coarse)').matches) {
+      return 2000; // 2 วินาที สำหรับ touch device
+    }
+    return 500; // 0.5 วินาที สำหรับ desktop
+  };
+
   // ฟังก์ชันแสดง Navbar และรีเซ็ต timer
   const showNavbar = React.useCallback(() => {
     setIsNavbarVisible(true);
@@ -23,7 +31,7 @@ const Navbar = () => {
     if (!isHoveringNavbar) {
       hideTimer.current = setTimeout(() => {
         setIsNavbarVisible(false);
-      }, 500);
+      }, getHideDelay());
     }
   }, [isHoveringNavbar]);
 
@@ -82,7 +90,7 @@ const Navbar = () => {
     setIsHoveringNavbar(false);
     hideTimer.current = setTimeout(() => {
       setIsNavbarVisible(false);
-    }, 500);
+    }, getHideDelay());
   };
 
   return (
