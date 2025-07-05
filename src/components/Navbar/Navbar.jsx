@@ -8,6 +8,42 @@ const Navbar = () => {
   const isServicesPage = location.pathname === '/services';
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
+  // เพิ่ม state สำหรับควบคุมการแสดง/ซ่อน Navbar
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  // ref สำหรับ timer
+  const hideTimer = React.useRef();
+  // state สำหรับตรวจสอบ mouse อยู่บน navbar
+  const [isHoveringNavbar, setIsHoveringNavbar] = useState(false);
+
+  // ฟังก์ชันแสดง Navbar และรีเซ็ต timer
+  const showNavbar = React.useCallback(() => {
+    setIsNavbarVisible(true);
+    if (hideTimer.current) clearTimeout(hideTimer.current);
+    // ถ้า mouse อยู่บน navbar ไม่ต้องเริ่ม timer ซ่อน
+    if (!isHoveringNavbar) {
+      hideTimer.current = setTimeout(() => {
+        setIsNavbarVisible(false);
+      }, 500);
+    }
+  }, [isHoveringNavbar]);
+
+  useEffect(() => {
+    // แสดง Navbar เมื่อ scroll, mousemove, touchstart
+    const handleUserActive = () => {
+      showNavbar();
+    };
+    window.addEventListener('scroll', handleUserActive);
+    window.addEventListener('mousemove', handleUserActive);
+    window.addEventListener('touchstart', handleUserActive);
+    // เริ่ม timer ซ่อน Navbar ครั้งแรก
+    showNavbar();
+    return () => {
+      window.removeEventListener('scroll', handleUserActive);
+      window.removeEventListener('mousemove', handleUserActive);
+      window.removeEventListener('touchstart', handleUserActive);
+      if (hideTimer.current) clearTimeout(hideTimer.current);
+    };
+  }, [showNavbar]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,8 +72,26 @@ const Navbar = () => {
     }
   };
 
+  // เมื่อ mouse ออกจาก navbar ให้เริ่ม timer ซ่อนใหม่
+  const handleMouseEnter = () => {
+    setIsHoveringNavbar(true);
+    if (hideTimer.current) clearTimeout(hideTimer.current);
+    setIsNavbarVisible(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHoveringNavbar(false);
+    hideTimer.current = setTimeout(() => {
+      setIsNavbarVisible(false);
+    }, 500);
+  };
+
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.navbarBlur : styles.navbarTransparent}`}>
+    <nav
+      className={`${styles.navbar} ${scrolled ? styles.navbarBlur : styles.navbarTransparent} ${isNavbarVisible ? styles.navbarShow : styles.navbarHide}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      tabIndex={0}
+    >
       <div className={styles.logo} onClick={() => navigate('/')}>
         <img src={Logo} alt="ThaiNest Logo" className={styles.logo} />
       </div>
