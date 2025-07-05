@@ -107,7 +107,6 @@ const App = () => {
           <>
             <Slider />
             <NestWelcome />
-            <div className="homeSafeArea" />
             <Aboutus />
             <BlogSection />
             <Contact />
