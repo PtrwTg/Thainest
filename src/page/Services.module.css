@@ -435,6 +435,7 @@
   padding-top: var(--navbar-height, 8vh);
   scroll-margin-top: var(--navbar-height, 8vh);
   box-sizing: border-box;
+  padding-bottom: 10vh;
 }
 
 .facialTitle {
