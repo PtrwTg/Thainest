@@ -167,6 +167,7 @@
 
   .navLink {
     font-size: 0.8rem;
+    padding: 1px 1px !important;
   }
 }
 
