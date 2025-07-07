@@ -129,7 +129,7 @@
 }
 @media (max-width: 600px) {
   .homeContainer {
-    height: 70vh;
+    height: 75vh;
     padding: 0.1rem 0 0.1rem 0;
   }
   .welcomeTitle {
@@ -176,6 +176,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+  }
+  .homeContainerSpacer{
+    height: 0vh;
   }
 }
 
