@@ -162,20 +162,16 @@
 
 @media (max-width: 600px) {
   .servicesHeroSection {
-    height: 95vh;
-    min-height: 95vh;
+    height: auto;
+    min-height: unset;
   }
   .servicesHeroContainer {
-    height: 36vh;
-    flex-basis: 36vh;
+    height: auto;
+    flex-basis: unset;
   }
   .nestingExperienceBox {
-    height: 72vh;
-    flex-basis: 72vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    height: auto;
+    flex-basis: unset;
   }
   .centeredImage, .facialImage {
     width: 75vw;
@@ -193,15 +189,36 @@
     max-width: 100vw;
   }
   .cardList {
-    gap: 8px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    gap: 16px;
   }
   .therapyCard {
-    padding: 8px 2px;
-    gap: 4px;
-    width: 98vw;
-    max-width: 100vw;
-    min-height: 100px;
-    border-radius: 12px;
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 12px #e5c17722;
+    padding: 16px 12px;
+    margin-bottom: 10px;
+    gap: 8px;
+    height: auto;
+    min-height: unset;
+    flex-basis: unset;
+  }
+  .cardImg {
+    width: 60px;
+    height: 60px;
+    border-radius: 0.8rem;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+  .cardTitle {
+    margin-bottom: 4px;
+  }
+  .cardDesc {
+    margin-bottom: 8px;
+  }
+  .cardBtn {
+    margin-top: 6px;
   }
   .facialSection {
     padding: 2vh 2vw !important;
