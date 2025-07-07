@@ -194,31 +194,28 @@
     gap: 16px;
   }
   .therapyCard {
-    background: #fff;
-    border-radius: 1.2rem;
-    box-shadow: 0 2px 12px #e5c17722;
-    padding: 16px 12px;
-    margin-bottom: 10px;
-    gap: 8px;
-    height: auto;
-    min-height: unset;
-    flex-basis: unset;
+    padding: 12px 6px 14px 6px !important;
+    gap: 9px !important;
   }
   .cardImg {
-    width: 60px;
-    height: 60px;
-    border-radius: 0.8rem;
-    object-fit: cover;
-    margin-bottom: 8px;
+    height: 128px !important;
+    margin-bottom: 7px !important;
+  }
+  .cardContent {
+    gap: 7px !important;
   }
   .cardTitle {
-    margin-bottom: 4px;
+    font-size: 0.88rem !important;
+    margin-bottom: 4px !important;
   }
   .cardDesc {
-    margin-bottom: 8px;
+    font-size: 0.78rem !important;
+    margin-bottom: 6px !important;
   }
   .cardBtn {
-    margin-top: 6px;
+    font-size: 0.8rem !important;
+    padding: 0.56em 0 !important;
+    margin-top: 6px !important;
   }
   .facialSection {
     padding: 2vh 2vw !important;
@@ -412,24 +409,42 @@
 
 @media (max-width: 600px) {
   .therapyCard {
-    max-width: 99vw;
-    min-width: 0;
-    padding: 6px 4px;
-    gap: 6px;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 12px 6px 14px 6px !important;
+    gap: 9px !important;
   }
   .cardImg {
-    width: 60px;
-    height: 60px;
+    width: 100% !important;
+    height: 128px !important;
+    border-radius: 1rem 1rem 0 0 !important;
+    margin-bottom: 7px !important;
+    flex-shrink: unset !important;
+    display: block !important;
+  }
+  .cardContent {
+    width: 100% !important;
+    gap: 7px !important;
   }
   .cardTitle {
-    font-size: 0.92rem;
+    font-size: 0.88rem !important;
+    margin-bottom: 4px !important;
   }
-  .cardDesc, .cardContent {
-    font-size: 0.78rem;
+  .cardDesc {
+    font-size: 0.78rem !important;
+    margin-bottom: 6px !important;
   }
   .cardBtn {
-    font-size: 0.78rem;
-    padding: 2px 6px;
+    display: block !important;
+    width: 100% !important;
+    margin-top: 6px !important;
+    font-size: 0.8rem !important;
+    padding: 0.56em 0 !important;
+    border-radius: 0.7em !important;
+    text-align: center !important;
   }
   .therapySection {
     min-height: calc(140vh - 56px);
