@@ -129,7 +129,7 @@
 }
 @media (max-width: 600px) {
   .sliderContainer {
-    height: 32vh;
+    height: 25vh;
   }
   .slideText h1 {
     font-size: clamp(0.9rem, 8vw, 1.2rem);
