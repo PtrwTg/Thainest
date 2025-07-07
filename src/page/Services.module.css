@@ -174,15 +174,17 @@
     flex-basis: unset;
   }
   .centeredImage, .facialImage {
-    width: 75vw;
-    max-width: 220px;
-    max-height: 14vh;
+    width: 95vw !important;
+    max-width: 340px !important;
+    max-height: 30vh !important;
   }
   .servicesHeroText {
     font-size: clamp(1.2rem, 7vw, 2.2rem);
   }
   .nestingExperienceText {
     font-size: clamp(1.1rem, 5vw, 1.3rem);
+    margin-top: 10vh !important;
+    margin-bottom: 5vh !important;
   }
   .therapySection {
     padding: 0 2vw;
@@ -205,15 +207,13 @@
     gap: 7px !important;
   }
   .cardTitle {
-    font-size: 0.88rem !important;
-    margin-bottom: 4px !important;
+    font-size: 1.2rem !important;
   }
   .cardDesc {
-    font-size: 0.78rem !important;
-    margin-bottom: 6px !important;
+    font-size: 1rem !important;
   }
   .cardBtn {
-    font-size: 0.8rem !important;
+    font-size: 1rem !important;
     padding: 0.56em 0 !important;
     margin-top: 6px !important;
   }
@@ -224,36 +224,15 @@
     
   }
   .facialTitle {
-    font-size: 1.5rem !important;
-    margin: 0 0 4px 0 !important;
-    padding: 0 !important;
+    font-size: 1rem !important;
   }
-  .facialImage {
-    margin: 20px auto 50px auto !important;
-    width: 90vw !important;
-    max-width: 95vw !important;
-  }
-  .facialCardList {
-    gap: 4px !important;
-    padding: 0 !important;
-    margin: 20px !important;
-  }
-  .facialCard {
-    width: 98vw !important;
-    max-width: 100vw !important;
-    min-width: 0 !important;
-    padding: 8px 2px !important;
-    border-radius: 12px !important;
-    gap: 4px !important;
-    margin-bottom: 0 !important;
+  .therapyTitle {
+    font-size: 1rem !important;
   }
   .nestingExperienceBox > div {
     flex-direction: column !important;
     align-items: center !important;
     gap: 2vw !important;
-  }
-  .therapyTitle {
-    font-size: 1.5rem !important;
   }
 }
 
@@ -433,18 +412,16 @@
     gap: 7px !important;
   }
   .cardTitle {
-    font-size: 0.88rem !important;
-    margin-bottom: 4px !important;
+    font-size: 1.2rem !important;
   }
   .cardDesc {
-    font-size: 0.78rem !important;
-    margin-bottom: 6px !important;
+    font-size: 1rem !important;
   }
   .cardBtn {
     display: block !important;
     width: 100% !important;
     margin-top: 6px !important;
-    font-size: 0.8rem !important;
+    font-size: 1rem !important;
     padding: 0.56em 0 !important;
     border-radius: 0.7em !important;
     text-align: center !important;
@@ -459,7 +436,10 @@
     padding-right: 2vw;
   }
   .therapyTitle {
-    font-size: 1.35rem !important;
+    font-size: 3rem !important;
+  }
+  .facialTitle {
+    font-size: 3rem !important;
   }
 }
 
@@ -573,7 +553,7 @@
 
 @media (max-width: 600px) {
   .facialTitle {
-    font-size: 1.25rem !important;
+    font-size: 3rem !important;
   }
   .facialImage, .centeredImage {
     max-height: 38vh;
