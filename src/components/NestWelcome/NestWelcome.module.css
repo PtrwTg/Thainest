@@ -138,6 +138,14 @@
   .welcomeSubtitle, .welcomeDescription {
     font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   }
+  .welcomeDescription {
+    padding-left: 7vw;
+    padding-right: 7vw;
+    line-height: 1.7;
+    text-align: left;
+    white-space: pre-line;
+    margin-bottom: 0.7rem;
+  }
   .combinedImgContainer {
     width: 100%;
     max-width: 100%;
