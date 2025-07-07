@@ -108,6 +108,7 @@
   position: relative;
   z-index: 10;
   overflow: hidden;
+  margin-top: 2vh;
 }
 .serviceCard {
   display: flex;

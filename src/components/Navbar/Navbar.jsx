@@ -18,9 +18,9 @@ const Navbar = () => {
   // ฟังก์ชันกำหนด delay ตามอุปกรณ์
   const getHideDelay = () => {
     if ('ontouchstart' in window || window.matchMedia('(pointer: coarse)').matches) {
-      return 2000; // 2 วินาที สำหรับ touch device
+      return 3000; // 2 วินาที สำหรับ touch device
     }
-    return 500; // 0.5 วินาที สำหรับ desktop
+    return 1500; // 0.5 วินาที สำหรับ desktop
   };
 
   // ฟังก์ชันแสดง Navbar และรีเซ็ต timer
