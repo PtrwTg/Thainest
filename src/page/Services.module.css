@@ -224,7 +224,7 @@
     
   }
   .facialTitle {
-    font-size: 1.1rem !important;
+    font-size: 1.5rem !important;
     margin: 0 0 4px 0 !important;
     padding: 0 !important;
   }
@@ -251,6 +251,9 @@
     flex-direction: column !important;
     align-items: center !important;
     gap: 2vw !important;
+  }
+  .therapyTitle {
+    font-size: 1.5rem !important;
   }
 }
 
@@ -455,6 +458,9 @@
     padding-left: 2vw;
     padding-right: 2vw;
   }
+  .therapyTitle {
+    font-size: 1.35rem !important;
+  }
 }
 
 .facialSection {
@@ -567,7 +573,7 @@
 
 @media (max-width: 600px) {
   .facialTitle {
-    font-size: clamp(0.95rem, 6vw, 1.1rem);
+    font-size: 1.25rem !important;
   }
   .facialImage, .centeredImage {
     max-height: 38vh;
