@@ -1,2 +1,3 @@
 # Fortest Dynamic git repo in https://github.com/PtrwTg/Thainest
-Test successfully
+Reading Test successfully
+Edit Test successfully
