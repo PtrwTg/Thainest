@@ -55,9 +55,7 @@ const Slider = () => {
         ))}
       </div>
 
-      <button className={styles.buyVoucherButton} onClick={() => window.open('https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ==', '_blank', 'noopener,noreferrer')}>
-        Buy Gift Voucher
-      </button>
+      <button className={styles.buyVoucherButton} onClick={() => window.open('https://www.facebook.com/', '_blank', 'noopener,noreferrer')}>Bye Gift Voucher </button>
     </div>
   );
 };
