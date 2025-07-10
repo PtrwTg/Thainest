@@ -18,8 +18,6 @@ const imageMap = {
 const slideTexts = [
   { headline: 'Relax', image: 'slide1.svg' },
   { headline: 'Relieve', image: 'slide2.svg' },
-  { headline: 'Return to Nest', image: 'slide3.svg' },
-  // เพิ่ม slide ใหม่ได้ที่นี่
 ];
 
 // config ปุ่ม Buy Voucher (แก้ไขข้อความ/ลิงก์ได้ง่าย)
