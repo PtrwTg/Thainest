@@ -8,9 +8,11 @@ import blog2 from './blog2.svg';
 import flower from './flower.svg';
 
 // Map string -> import จริง
+import blog3 from './blog3.svg';
 const imageMap = {
   'blog1.svg': blog1,
   'blog2.svg': blog2,
+  'blog3.svg': blog3,
 };
 
 // CONFIG ทั้งหมดสำหรับ BlogSection (image เป็น string)
@@ -36,6 +38,12 @@ const blogSectionConfig = {
       "alt": "History of Thai Massage",
       "title": "History of Thai Massage",
       "link": "https://www.nuadthaischool.com/the-history-and-origins-of-thai-massage/"
+    },
+    {
+      "image": "blog3.svg",
+      "alt": "How to Prepare for Thai Massage",
+      "title": "How to Prepare for Thai Massage",
+      "link": "https://www.makkhahealthandspa.com/how-to-prepare-for-a-massage/"
     }
   ],
   "reconnectSection": {
