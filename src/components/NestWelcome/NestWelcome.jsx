@@ -1,9 +1,6 @@
 import React from 'react';
 import styles from './NestWelcome.module.css';
 import CombineImg from './combine.svg';
-
-// config object สำหรับเนื้อหา (ข้อความ) ทั้งหมด
-// สามารถแก้ไขข้อความได้ที่นี่ (รองรับการแก้ไขผ่าน admin ในอนาคต)
 const nestWelcomeContent = {
   title: 'Welcome to ThaiNest',
   subtitle: 'Relax, Relieve, Return to Nest',
