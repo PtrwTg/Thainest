@@ -7,7 +7,7 @@ import FacialMas2 from './facialmas2.svg';
 import fitty from 'fitty';
 const imageMap = {
   'facialmas1.svg': FacialMas1,
-  'facialmas2.svg': FacialMas2,  'facialmas3.svg': FacialMas3,  'facialmas3.svg': FacialMas3
+  'facialmas2.svg': FacialMas2,
 };
 const aboutusContent = {
   "nurturingTitle": "Nurturing Body & Soul",
