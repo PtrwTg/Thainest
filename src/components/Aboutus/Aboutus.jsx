@@ -7,7 +7,6 @@ import FacialMas2 from './facialmas2.svg';
 import fitty from 'fitty';
 
 // object สำหรับ map ชื่อไฟล์กับ import จริง
-import FacialMas3 from './facialmas3.svg';
 
 const imageMap = {
   'facialmas1.svg': FacialMas1,
@@ -34,12 +33,6 @@ const aboutusContent = {
       "image": "facialmas2.svg",
       "alt": "Facial Treatments",
       "buttonText": "Treatments",
-      "link": "/services"
-    },
-    {
-      "image": "facialmas3.svg",
-      "alt": "Test",
-      "buttonText": "Test",
       "link": "/services"
     }
   ]
