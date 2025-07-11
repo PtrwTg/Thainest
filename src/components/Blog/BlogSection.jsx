@@ -37,12 +37,6 @@ const blogSectionConfig = {
       "alt": "History of Thai Massage",
       "title": "History of Thai Massage",
       "link": "https://www.nuadthaischool.com/the-history-and-origins-of-thai-massage/"
-    },
-    {
-      "image": "blog3",
-      "alt": "How to Prepare for Thai Massage",
-      "title": "How to Prepare for Thai Massage",
-      "link": "https://www.makkhahealthandspa.com/how-to-prepare-for-a-massage/"
     }
   ],
   "reconnectSection": {
