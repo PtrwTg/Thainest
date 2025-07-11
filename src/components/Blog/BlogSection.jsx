@@ -16,42 +16,36 @@ const imageMap = {
 
 // CONFIG ทั้งหมดสำหรับ BlogSection (image เป็น string)
 const blogSectionConfig = {
-  envText: {
-    left: 'Environment Your ',
-    right: 'Nest of Calm',
+  "envText": {
+    "left": "Environment Your ",
+    "right": "Nest of Calm"
   },
-  interiorText: [
+  "interiorText": [
     "Our interior is inspired by nature's soft embrace: earthy woods, cozy textures, warm lighting, and calming hues. We've carefully designed every corner to evoke the comfort of home and the serenity of a sacred retreat.",
-    'Settle in, sink deep, and let your body remember what peace feels like.'
+    "Settle in, sink deep, and let your body remember what peace feels like."
   ],
-  wellnessJournalTitle: 'Wellness Journal',
-  blogPosts: [
+  "wellnessJournalTitle": "Wellness Journal",
+  "blogPosts": [
     {
-      image: 'blog1.svg',
-      alt: 'Benefits of Thai Massage',
-      title: 'Benefits of Thai Massage',
-      link: 'https://www.health.com/thai-massage-7814435',
+      "image": "blog1.svg",
+      "alt": "Benefits of Thai Massage",
+      "title": "Benefits of Thai Massage",
+      "link": "https://www.health.com/thai-massage-7814435"
     },
     {
-      image: 'blog2.svg',
-      alt: 'History of Thai Massage',
-      title: 'History of Thai Massage',
-      link: 'https://www.nuadthaischool.com/the-history-and-origins-of-thai-massage/',
-    },
-    {
-      image: 'blog3.svg',
-      alt: 'How to Prepare for Thai Massage',
-      title: 'How to Prepare for Thai Massage',
-      link: 'https://www.makkhahealthandspa.com/how-to-prepare-for-a-massage/',
-    },
+      "image": "blog2.svg",
+      "alt": "History of Thai Massage",
+      "title": "History of Thai Massage",
+      "link": "https://www.nuadthaischool.com/the-history-and-origins-of-thai-massage/"
+    }
   ],
-  reconnectSection: {
-    title1: 'Ready to Reconnect with ',
-    title2: 'Yourself?',
-    desc: 'Book Your Nesting Experience today and step into a space of peace and healing.',
-    button: {
-      text: 'Book Nesting Experience',
-      url: 'https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ==',
+  "reconnectSection": {
+    "title1": "Ready to Reconnect with ",
+    "title2": "Yourself?",
+    "desc": "Book Your Nesting Experience today and step into a space of peace and healing.",
+    "button": {
+      "text": "Book Nesting Experience",
+      "url": "https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ=="
     }
   }
 };
