@@ -6,15 +6,34 @@ import FacialMas1 from './facialmas1.svg';
 import FacialMas2 from './facialmas2.svg';
 import fitty from 'fitty';
 
+// object สำหรับ map ชื่อไฟล์กับ import จริง
+const imageMap = {
+  'facialmas1.svg': FacialMas1,
+  'facialmas2.svg': FacialMas2,
+  // เพิ่มไฟล์ใหม่ได้ที่นี่
+};
+
 // config object สำหรับข้อความทั้งหมดใน Aboutus
 const aboutusContent = {
   nurturingTitle: "Nurturing Body & Soul",
   nurturingDesc: "At ThaiNest, we believe true healing happens when the body and soul are cared for as one. Inspired by the wisdom of Thai traditions, our mission is to provide a peaceful retreat where you can unplug, unwind, and return to yourself. Our therapists bring not only professional expertise but a deep commitment to comfort, care, and connection.",
   servicesTitle: "Our Services",
   servicesDesc: "At ThaiNest, we believe that true wellness begins with balance – of body, mind, and spirit. Rooted in the healing traditions of Thai therapy and enhanced by modern facial techniques, our services are thoughtfully designed to restore your natural vitality and inner calm.\nWhether you seek relief from tension, a radiant complexion, or simply a moment of peace, our expert therapists and estheticians are here to tailor each experience to your unique needs. From deeply therapeutic Thai massages to rejuvenating skin treatments, every visit is a step toward your most relaxed and revitalised self.",
-  serviceButtons: [
-    { text: "Facial Massage", link: "/services" },
-    { text: "Treatments", link: "/services" }
+  // array ของ service cards (เพิ่ม/ลบได้ง่าย)
+  serviceCards: [
+    {
+      image: 'facialmas1.svg',
+      alt: 'Facial Massage',
+      buttonText: 'Facial Massage',
+      link: '/services'
+    },
+    {
+      image: 'facialmas2.svg',
+      alt: 'Facial Treatments',
+      buttonText: 'Treatments',
+      link: '/services'
+    }
+    // เพิ่ม service card ใหม่ได้ที่นี่
   ]
 };
 
@@ -57,14 +76,15 @@ const Aboutus = () => {
       </div>
 
       <div className={styles.servicesImagesRow}>
-        <div className={styles.serviceCard}>
-          <img src={FacialMas1} alt="Facial Massage" className={styles.serviceImg} />
-          <button className={styles.serviceBtn} onClick={() => window.location.href=aboutusContent.serviceButtons[0].link}>{aboutusContent.serviceButtons[0].text}</button>
-        </div>
-        <div className={styles.serviceCard}>
-          <img src={FacialMas2} alt="Facial Treatments" className={styles.serviceImg} />
-          <button className={styles.serviceBtn} onClick={() => window.location.href=aboutusContent.serviceButtons[1].link}>{aboutusContent.serviceButtons[1].text}</button>
-        </div>
+        {/* map service cards จาก array */}
+        {aboutusContent.serviceCards.map((service, index) => (
+          <div key={index} className={styles.serviceCard}>
+            <img src={imageMap[service.image]} alt={service.alt} className={styles.serviceImg} />
+            <button className={styles.serviceBtn} onClick={() => window.location.href=service.link}>
+              {service.buttonText}
+            </button>
+          </div>
+        ))}
       </div>
       <div className={styles.aboutusFreeSpace}></div>
     </div>
