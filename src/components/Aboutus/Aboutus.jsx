@@ -5,10 +5,12 @@ import CandleImg from './candle.svg';
 import FacialMas1 from './facialmas1.svg';
 import FacialMas2 from './facialmas2.svg';
 import fitty from 'fitty';
+import FacialMas3 from './facialmas3.svg';
 
 const imageMap = {
   'facialmas1.svg': FacialMas1,
-  'facialmas2.svg': FacialMas2,
+  'facialmas2.svg': FacialMas2,  'facialmas3.svg': FacialMas3,
+
 };
 
 const aboutusContent = {
@@ -27,6 +29,12 @@ const aboutusContent = {
       "image": "facialmas2.svg",
       "alt": "Facial Treatments",
       "buttonText": "Treatments",
+      "link": "/services"
+    },
+    {
+      "image": "facialmas3.svg",
+      "alt": "Test ",
+      "buttonText": "Test ",
       "link": "/services"
     }
   ]
