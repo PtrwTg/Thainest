@@ -5,16 +5,10 @@ import CandleImg from './candle.svg';
 import FacialMas1 from './facialmas1.svg';
 import FacialMas2 from './facialmas2.svg';
 import fitty from 'fitty';
-import FacialMas3 from './facialmas3.svg';
-
 const imageMap = {
   'facialmas1.svg': FacialMas1,
-  'facialmas2.svg': FacialMas2,  'facialmas3.svg': FacialMas3,  'facialmas3.svg': FacialMas3,
-
-
-
+  'facialmas2.svg': FacialMas2,  'facialmas3.svg': FacialMas3,  'facialmas3.svg': FacialMas3
 };
-
 const aboutusContent = {
   "nurturingTitle": "Nurturing Body & Soul",
   "nurturingDesc": "At ThaiNest, we believe true healing happens when the body and soul are cared for as one. Inspired by the wisdom of Thai traditions, our mission is to provide a peaceful retreat where you can unplug, unwind, and return to yourself. Our therapists bring not only professional expertise but a deep commitment to comfort, care, and connection.",
@@ -32,20 +26,12 @@ const aboutusContent = {
       "alt": "Facial Treatments",
       "buttonText": "Treatments",
       "link": "/services"
-    },
-    {
-      "image": "facialmas3.svg",
-      "alt": "Test ",
-      "buttonText": "Test ",
-      "link": "/services"
     }
   ]
 };
-
 const Aboutus = () => {
   const titleRef = useRef(null);
   const servicesTitleRef = useRef(null);
-
   useEffect(() => {
     if (titleRef.current) {
       fitty(titleRef.current, { minSize: 8, maxSize: 48 });
@@ -54,19 +40,16 @@ const Aboutus = () => {
       fitty(servicesTitleRef.current, { minSize: 12, maxSize: 36 });
     }
   }, []);
-
   return (
     <div id="services">
       <div id="about" className={styles.nurturingSection}>
         <h2 className={styles.nurturingTitle} ref={titleRef}>{aboutusContent.nurturingTitle}</h2>
         <div className={styles.nurturingDesc}>{aboutusContent.nurturingDesc}</div>
       </div>
-
       {/* รูป candle.svg เต็มจอคอม */}
       <div className={styles.candleImgContainer}>
         <img src={CandleImg} alt="Candle" className={styles.candleImg} />
       </div>
-
       {/* กล่องโค้งพร้อมข้อความ Our Services */}
       <div className={styles.servicesCurvedBox}>
         <div className={styles.servicesTitle} ref={servicesTitleRef}>{aboutusContent.servicesTitle}</div>
@@ -79,7 +62,6 @@ const Aboutus = () => {
           ))}
         </div>
       </div>
-
       <div className={styles.servicesImagesRow}>
         {/* map service cards จาก array */}
         {aboutusContent.serviceCards.map((service, index) => (
@@ -95,5 +77,4 @@ const Aboutus = () => {
     </div>
   );
 };
-
 export default Aboutus; 
