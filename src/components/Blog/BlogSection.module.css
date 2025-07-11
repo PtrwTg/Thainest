@@ -1,10 +1,8 @@
 .blogSectionContainer {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  overflow: hidden;
   position: relative;
 }
 * {
@@ -139,7 +137,8 @@
     margin-top: 2vh;
   }
   .blogBottomSection {
-    height: 56vh;
+    height: auto !important;
+    min-height: unset !important;
   }
   .blogIcon {
     width: 16vw;
@@ -148,6 +147,7 @@
   }
   .blogSliderWrapper {
     max-width: 98vw;
+    overflow-x: auto;
   }
   .blogCard {
     min-height: 170px;
@@ -193,7 +193,6 @@
 }
 .blogBottomSection {
   background: #A9B591;
-  height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -222,16 +221,17 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: auto; /* เพิ่ม scroll แนวนอนถ้าจำเป็น */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .blogGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* ปรับอัตโนมัติ */
   gap: 1.2vw;
   width: 100%;
+  min-width: 220px;
 }
 .blogCard {
   background: #EEE6DC;
@@ -347,5 +347,23 @@
     max-width: 80px; /* ลดลงจากเดิม 90px */
     height: 50px;     /* ลดลงจากเดิม 55px */
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .blogGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .blogSliderWrapper {
+    max-width: 98vw;
+    overflow-x: auto;
+  }
+  .blogGrid {
+    grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr));
+    gap: 3vw;
   }
 }
