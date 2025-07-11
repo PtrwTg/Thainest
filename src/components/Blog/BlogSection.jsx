@@ -7,6 +7,63 @@ import blog2 from './blog2.svg';
 import blog3 from './blog3.svg';
 import flower from './flower.svg';
 
+// CONFIG ทั้งหมดสำหรับ BlogSection
+const blogSectionConfig = {
+  envText: {
+    left: 'Environment Your ',
+    right: 'Nest of Calm',
+  },
+  interiorText: [
+    "Our interior is inspired by nature's soft embrace: earthy woods, cozy textures, warm lighting, and calming hues. We've carefully designed every corner to evoke the comfort of home and the serenity of a sacred retreat.",
+    'Settle in, sink deep, and let your body remember what peace feels like.'
+  ],
+  wellnessJournalTitle: 'Wellness Journal',
+  blogPosts: [
+    {
+      image: blog1,
+      alt: 'Benefits of Thai Massage',
+      title: 'Benefits of Thai Massage',
+      link: 'https://www.health.com/thai-massage-7814435',
+    },
+    {
+      image: blog2,
+      alt: 'History of Thai Massage',
+      title: 'History of Thai Massage',
+      link: 'https://www.nuadthaischool.com/the-history-and-origins-of-thai-massage/',
+    },
+    {
+      image: blog3,
+      alt: 'How to Prepare for Thai Massage',
+      title: 'How to Prepare for Thai Massage',
+      link: 'https://www.makkhahealthandspa.com/how-to-prepare-for-a-massage/',
+    },
+  ],
+  reconnectSection: {
+    title1: 'Ready to Reconnect with ',
+    title2: 'Yourself?',
+    desc: 'Book Your Nesting Experience today and step into a space of peace and healing.',
+    button: {
+      text: 'Book Nesting Experience',
+      url: 'https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ==',
+    }
+  }
+};
+
+// Component ย่อย BlogCard
+function BlogCard({ image, alt, title, link, onMouseEnter, onMouseMove, onMouseLeave }) {
+  return (
+    <div className={styles.blogCard}
+      onMouseEnter={e => onMouseEnter && onMouseEnter(e, title)}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+    >
+      <img src={image} alt={alt} className={styles.blogImg} />
+      <div className={styles.blogCardTitle}>{title}</div>
+      <a href={link} target="_blank" rel="noopener noreferrer" className={styles.blogReadMore}>Read More</a>
+    </div>
+  );
+}
+
 const BlogSection = () => {
   const sliderRef = useRef(null);
   // Tooltip state
@@ -37,40 +94,34 @@ const BlogSection = () => {
       {/* 10% Top: Environment Text */}
       <div className={styles.envRow}>
         <div className={styles.envText}>
-          <span>Environment Your </span>
-          <span className={styles.envMango}>Nest of Calm</span>
+          <span>{blogSectionConfig.envText.left}</span>
+          <span className={styles.envMango}>{blogSectionConfig.envText.right}</span>
         </div>
       </div>
       {/* 40%: Interior Text + Image */}
       <div className={styles.interiorRow}>
         <div className={styles.interiorText}>
-          <div>Our interior is inspired by nature's soft embrace: earthy woods, cozy textures, warm lighting, and calming hues. <br /> 
-           We've carefully designed every corner to evoke the comfort of home and the serenity of a sacred retreat.</div>
-          <div>Settle in, sink deep, and let your body remember what peace feels like.</div>
+          {blogSectionConfig.interiorText.map((line, idx) => (
+            <div key={idx}>{line}</div>
+          ))}
         </div>
         <img src={blogcombine} alt="Blog Interior" className={styles.blogImage} />
       </div>
       {/* 50% หลัง: Wellness Journal & Blog Slider */}
       <div className={styles.blogBottomSection}>
         <img src={blogicon} alt="Blog Icon" className={styles.blogIcon} />
-        <div className={styles.blogTitle}>Wellness Journal</div>
+        <div className={styles.blogTitle}>{blogSectionConfig.wellnessJournalTitle}</div>
         <div className={styles.blogSliderWrapper}>
           <div className={styles.blogGrid}>
-            <div className={styles.blogCard}>
-              <img src={blog1} alt="Benefits of Thai Massage" className={styles.blogImg} />
-              <div className={styles.blogCardTitle}>Benefits of Thai Massage</div>
-              <a href="https://www.health.com/thai-massage-7814435" target="_blank" rel="noopener noreferrer" className={styles.blogReadMore}>Read More</a>
-            </div>
-            <div className={styles.blogCard}>
-              <img src={blog2} alt="History of Thai Massage" className={styles.blogImg} />
-              <div className={styles.blogCardTitle}>History of Thai Massage</div>
-              <a href="https://www.nuadthaischool.com/the-history-and-origins-of-thai-massage/" target="_blank" rel="noopener noreferrer" className={styles.blogReadMore}>Read More</a>
-            </div>
-            <div className={styles.blogCard}>
-              <img src={blog3} alt="How to Prepare for Thai Massage" className={styles.blogImg} />
-              <div className={styles.blogCardTitle}>How to Prepare for Thai Massage</div>
-              <a href="https://www.makkhahealthandspa.com/how-to-prepare-for-a-massage/" target="_blank" rel="noopener noreferrer" className={styles.blogReadMore}>Read More</a>
-            </div>
+            {blogSectionConfig.blogPosts.map((post, idx) => (
+              <BlogCard
+                key={idx}
+                {...post}
+                onMouseEnter={handleMouseEnter}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+              />
+            ))}
           </div>
         </div>
         {/* Tooltip แสดงหัวข้อ blog ที่ตำแหน่งเมาส์ */}
@@ -97,13 +148,18 @@ const BlogSection = () => {
         )}
         <div className={styles.reconnectSection}>
           <h2 className={styles.reconnectTitle}>
-            <span className={styles.reconnectQuicksand}>Ready to Reconnect with </span>
-            <span className={styles.reconnectMango}>Yourself?</span>
+            <span className={styles.reconnectQuicksand}>{blogSectionConfig.reconnectSection.title1}</span>
+            <span className={styles.reconnectMango}>{blogSectionConfig.reconnectSection.title2}</span>
           </h2>
           <div className={styles.reconnectDesc}>
-            Book Your Nesting Experience today and step into a space of peace and healing.
+            {blogSectionConfig.reconnectSection.desc}
           </div>
-          <button className={styles.bookButton} onClick={() => window.open('https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ==', '_blank', 'noopener,noreferrer')}>Book Nesting Experience</button>
+          <button
+            className={styles.bookButton}
+            onClick={() => window.open(blogSectionConfig.reconnectSection.button.url, '_blank', 'noopener,noreferrer')}
+          >
+            {blogSectionConfig.reconnectSection.button.text}
+          </button>
         </div>
       </div>
     </div>
