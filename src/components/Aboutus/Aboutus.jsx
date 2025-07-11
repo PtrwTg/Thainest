@@ -6,19 +6,11 @@ import FacialMas1 from './facialmas1.svg';
 import FacialMas2 from './facialmas2.svg';
 import fitty from 'fitty';
 
-// object สำหรับ map ชื่อไฟล์กับ import จริง
-import FacialMas3 from './facialmas3.svg';
-
 const imageMap = {
   'facialmas1.svg': FacialMas1,
   'facialmas2.svg': FacialMas2,
-  // เพิ่มไฟล์ใหม่ได้ที่นี่  'facialmas3.svg': FacialMas3,  'facialmas3.svg': FacialMas3,  'facialmas3.svg': FacialMas3,
-
-
-
 };
 
-// config object สำหรับข้อความทั้งหมดใน Aboutus
 const aboutusContent = {
   "nurturingTitle": "Nurturing Body & Soul",
   "nurturingDesc": "At ThaiNest, we believe true healing happens when the body and soul are cared for as one. Inspired by the wisdom of Thai traditions, our mission is to provide a peaceful retreat where you can unplug, unwind, and return to yourself. Our therapists bring not only professional expertise but a deep commitment to comfort, care, and connection.",
@@ -35,12 +27,6 @@ const aboutusContent = {
       "image": "facialmas2.svg",
       "alt": "Facial Treatments",
       "buttonText": "Treatments",
-      "link": "/services"
-    },
-    {
-      "image": "facialmas3.svg",
-      "alt": "Test",
-      "buttonText": "Test",
       "link": "/services"
     }
   ]
