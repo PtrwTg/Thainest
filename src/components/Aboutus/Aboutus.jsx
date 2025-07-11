@@ -31,12 +31,6 @@ const aboutusContent = {
       "alt": "Facial Treatments",
       "buttonText": "Treatments",
       "link": "/services"
-    },
-    {
-      "image": "facialmas3.svg",
-      "alt": "Test",
-      "buttonText": "Test",
-      "link": "/services"
     }
   ]
 };
