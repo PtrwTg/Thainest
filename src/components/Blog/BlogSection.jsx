@@ -7,7 +7,14 @@ import blog2 from './blog2.svg';
 import blog3 from './blog3.svg';
 import flower from './flower.svg';
 
-// CONFIG ทั้งหมดสำหรับ BlogSection
+// Map string -> import จริง
+const imageMap = {
+  'blog1.svg': blog1,
+  'blog2.svg': blog2,
+  'blog3.svg': blog3,
+};
+
+// CONFIG ทั้งหมดสำหรับ BlogSection (image เป็น string)
 const blogSectionConfig = {
   envText: {
     left: 'Environment Your ',
@@ -20,19 +27,19 @@ const blogSectionConfig = {
   wellnessJournalTitle: 'Wellness Journal',
   blogPosts: [
     {
-      image: blog1,
+      image: 'blog1.svg',
       alt: 'Benefits of Thai Massage',
       title: 'Benefits of Thai Massage',
       link: 'https://www.health.com/thai-massage-7814435',
     },
     {
-      image: blog2,
+      image: 'blog2.svg',
       alt: 'History of Thai Massage',
       title: 'History of Thai Massage',
       link: 'https://www.nuadthaischool.com/the-history-and-origins-of-thai-massage/',
     },
     {
-      image: blog3,
+      image: 'blog3.svg',
       alt: 'How to Prepare for Thai Massage',
       title: 'How to Prepare for Thai Massage',
       link: 'https://www.makkhahealthandspa.com/how-to-prepare-for-a-massage/',
@@ -117,6 +124,7 @@ const BlogSection = () => {
               <BlogCard
                 key={idx}
                 {...post}
+                image={imageMap[post.image]}
                 onMouseEnter={handleMouseEnter}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
