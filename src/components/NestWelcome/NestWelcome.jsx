@@ -4,7 +4,7 @@ import CombineImg from './combine.svg';
 const nestWelcomeContent = {
   "title": "Welcome to ThaiNest",
   "subtitle": "Relax, Relieve, Return to Nest",
-  "description": "Nestled in a space where Thai wellness meets tranquil comfort, ThaiNest Massage and Facial is your sanctuary of peace and restoration.\nOur treatments are rooted in ancient Thai healing practices and delivered in a warm, nurturing environment that feels like home. \nWhether you seek deep relaxation or holistic renewal, ThaiNest is where your journey to balance begins.",
+  "description": "Nestled in a space where Thai wellness meets tranquil comfort, ThaiNest Massage and Facial is your sanctuary of peace and restoration.\nOur treatments are rooted in ancient Thai healing \npractices and delivered in a warm, nurturing environment that feels like home. \nWhether you seek deep relaxation or holistic renewal, ThaiNest is where your journey to balance begins.",
   "bookButton": {
     "text": "Book Nesting Experience",
     "link": "https://myappointments.app/portal/public/get-embeded-code?business_id=MjI1OQ=="
