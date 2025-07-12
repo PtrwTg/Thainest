@@ -78,7 +78,7 @@ const servicesConfig = {
     },
     {
       "img": "/assets/images/11.svg",
-      "title": "Test",
+      "title": "Manual Facial Uplifting Massage",
       "desc": "A rejuvenating facial massage using lifting techniques and Gua Sha to tone, sculpt, and refresh tired, stressed skin."
     }
   ],
