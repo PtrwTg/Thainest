@@ -26,7 +26,6 @@ const imagesToPreload = [
   '../assets/images/10.svg',
   '../assets/images/11.svg',
   '../assets/images/4img2.svg',
-  '../assets/images/BG2.svg',
   '../assets/images/LogoThaiNest.svg',
   '/src/components/NestWelcome/combine.svg',
   '/src/components/Aboutus/candle.svg',
