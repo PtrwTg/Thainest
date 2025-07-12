@@ -5,12 +5,11 @@ import slide1 from './slide1.svg';
 import slide2 from './slide2.svg';
 import slide3 from './slide3.svg';
 
-// object สำหรับ map ชื่อไฟล์กับ import จริง
+
 const imageMap = {
   'slide1.svg': slide1,
   'slide2.svg': slide2,
   'slide3.svg': slide3,
-  // เพิ่มไฟล์ใหม่ได้ที่นี่
 };
 
 // slideTexts: array ของ object (headline + image)
@@ -19,7 +18,6 @@ const slideTexts = [
   { headline: 'Relax', image: 'slide1.svg' },
   { headline: 'Relieve', image: 'slide2.svg' },
   { headline: 'Return to Nest', image: 'slide3.svg' },
-  { headline: 'Test', image: 'slide4.svg' },
 ];
 
 // config ปุ่ม Buy Voucher (แก้ไขข้อความ/ลิงก์ได้ง่าย)
