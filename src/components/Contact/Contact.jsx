@@ -8,7 +8,7 @@ import hicapsLogo from './Hicap.svg';
 const contactConfig = {
   "title": "Contact & Booking",
   "phone": "048-3063-980",
-  "address": "Shop 4/74 Bulcock St, Caloundra QLD 4551",
+  "address": "Shop 4-74 Bulcock St, Caloundra QLD 4551",
   "facebook": {
     "name": "ThaiNest Caloundra",
     "url": "https://www.facebook.com/thainestmassage"
