@@ -11,7 +11,7 @@ const contactConfig = {
   "address": "Shop 4/74 Bulcock St, Caloundra QLD 4551",
   "facebook": {
     "name": "ThaiNest Caloundra",
-    "url": "https://www.facebook.com/thainest"
+    "url": "https://www.facebook.com/thainestmassage"
   },
   "operationTitle": "Operation Hours",
   "operationHours": [
