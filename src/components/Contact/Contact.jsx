@@ -6,20 +6,29 @@ import hicapsLogo from './Hicap.svg';
 
 // CONFIG ข้อมูลติดต่อ (ไม่มี icon/โลโก้)
 const contactConfig = {
-  title: 'Contact & Booking',
-  phone: '048-3063-980',
-  address: 'Shop 4/74 Bulcock St, Caloundra QLD 4551',
-  facebook: {
-    name: 'ThaiNest Caloundra',
-    url: 'https://www.facebook.com/thainestcaloundra',
+  "title": "Contact & Booking",
+  "phone": "048-3063-980",
+  "address": "Shop 4/74 Bulcock St, Caloundra QLD 4551",
+  "facebook": {
+    "name": "ThaiNest Caloundra",
+    "url": "https://www.facebook.com/thainest"
   },
-  operationTitle: 'Operation Hours',
-  operationHours: [
-    { day: 'Monday & Tuesday', time: '11:00am - 5:00pm' },
-    { day: 'Wednesday-Saturday', time: '9:00am - 5:00pm' },
-    { day: 'Sunday', time: '9:00am - 1:00pm' },
+  "operationTitle": "Operation Hours",
+  "operationHours": [
+    {
+      "day": "Monday & Tuesday",
+      "time": "11:00am - 5:00pm"
+    },
+    {
+      "day": "Wednesday-Saturday",
+      "time": "9:00am - 5:00pm"
+    },
+    {
+      "day": "Sunday",
+      "time": "9:00am - 1:00pm"
+    }
   ],
-  operationNote: 'Private Health Rebates Available.',
+  "operationNote": "Private Health Rebates Available."
 };
 
 const partnerLogos = [
