@@ -16,11 +16,7 @@ const contactConfig = {
   "operationTitle": "Operation Hours",
   "operationHours": [
     {
-      "day": "Monday & Tuesday",
-      "time": "11:00am - 5:00pm"
-    },
-    {
-      "day": "Wednesday-Saturday",
+      "day": "Monday - Saturday",
       "time": "9:00am - 5:00pm"
     },
     {
