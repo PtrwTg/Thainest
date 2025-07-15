@@ -7,6 +7,7 @@ const SEO = ({ title, description, structuredData }) => {
     "@context": "https://schema.org",
     "@type": "Spa",
     "name": "ThaiNest Massage & Facial",
+    "alternateName": "ThaiNest Caloundra, ThaiNest Massage, ThaiNest Facial, Thainest, Thai massage, Thai facial, Thainest Massage and Facial",
     "image": logoUrl,
     "address": {
       "@type": "PostalAddress",
