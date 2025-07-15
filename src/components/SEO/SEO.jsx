@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet";
 
 const SEO = ({ title, description, structuredData }) => {
-  //const logoUrl = window.location.origin + '/assets/images/LogoThaiNest.svg'; 
+  const BASE_URL = "https://thainestmassage.com.au";
+  const logoUrl = `${BASE_URL}/assets/images/LogoThaiNest.svg`;
+  const siteName = "ThaiNest Massage & Facial";
 
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -69,6 +71,21 @@ const SEO = ({ title, description, structuredData }) => {
     <Helmet>
       <title>{title}</title>
       {description && <meta name="description" content={description} />}
+
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={logoUrl} />
+      <meta property="og:url" content={BASE_URL} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={siteName} />
+
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={logoUrl} />
+
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
