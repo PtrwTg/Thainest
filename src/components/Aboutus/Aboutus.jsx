@@ -18,7 +18,7 @@ const aboutusContent = {
   "serviceCards": [
     {
       "image": "facialmas1.svg",
-      "alt": "Facial Massage",
+      "alt": "Massage",
       "buttonText": "Massage",
       "link": "/services"
     },

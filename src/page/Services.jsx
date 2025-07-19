@@ -13,14 +13,14 @@ const servicesConfig = {
     centerImages: [
       {
         src: '/assets/images/4img.svg',
-        alt: 'Massage Therapy',
-        title: 'Massage Therapy',
+        alt: 'Massage',
+        title: 'Massage',
         scrollTo: 'therapy-section',
       },
       {
         src: '/assets/images/4img2.svg',
-        alt: 'Treatments',
-        title: 'Treatments',
+        alt: 'Facial Treatment',
+        title: 'Facial Treatment',
         scrollTo: 'treatments-section',
       },
     ],
@@ -145,7 +145,7 @@ const Services = () => {
 
       {/* Section Massage Therapy */}
       <section className={styles.therapySection} id="therapy-section">
-        <h2 className={styles.therapyTitle}>Massage Therapy</h2>
+        <h2 className={styles.therapyTitle}>Massage</h2>
         <div className={styles.cardList}>
           {servicesConfig.massageServices.map((card, idx) => (
             <div className={styles.therapyCard} key={idx}>
@@ -169,7 +169,7 @@ const Services = () => {
 
       {/* Section Facial Treatments */}
       <section className={styles.facialSection} id="treatments-section">
-        <h2 className={styles.facialTitle}>Treatments</h2>
+        <h2 className={styles.facialTitle}>Facial Treatment</h2>
         <div className={styles.cardList}>
           {servicesConfig.facialServices.map((card, idx) => (
             <div className={styles.therapyCard} key={idx}>
