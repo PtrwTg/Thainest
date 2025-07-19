@@ -19,13 +19,13 @@ const aboutusContent = {
     {
       "image": "facialmas1.svg",
       "alt": "Facial Massage",
-      "buttonText": "Facial Massage",
+      "buttonText": "Massage",
       "link": "/services"
     },
     {
       "image": "facialmas2.svg",
       "alt": "Facial Treatments",
-      "buttonText": "Treatments",
+      "buttonText": "Facial Treatment",
       "link": "/services"
     }
   ]
