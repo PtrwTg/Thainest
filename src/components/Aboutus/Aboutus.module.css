@@ -2,14 +2,14 @@
 .nurturingSection {
   position: relative;
   width: 100%;
-  min-height: 0;
-  height: 23vh;
+  min-height: 23vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #798D70;
   overflow: hidden;
   padding-top: 6vh;
+  padding-bottom: 2vh;
 }
 .nurturingSection::before {
   content: '';
@@ -41,6 +41,9 @@
   z-index: 2;
   margin-top: clamp(1vh, 2vw, 2vh);
   padding-bottom: 2vh;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .candleImgContainer {
@@ -67,7 +70,7 @@
   background: #798D70 url('./Oppa1.svg');
   border-bottom-right-radius: 15vw;
   border-bottom-left-radius: 15vw;
-  height: 23vh;
+  min-height: 23vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,6 +98,9 @@
   max-width: 80%;
   margin-top: clamp(1vh, 2vw, 2vh);
   padding-bottom: 5vh;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .servicesImagesRow {
@@ -163,7 +169,7 @@
 }
 @media (max-width: 900px) {
   .nurturingSection {
-    height: 27vh;
+    min-height: 27vh;
     padding-top: 6vh;
     overflow: hidden;
   }
@@ -182,7 +188,7 @@
     height: 19vh;
   }
   .servicesCurvedBox {
-    height: 32vh;
+    min-height: 32vh;
   }
   .servicesTitle {
     font-size: clamp(1rem, 3vw, 1.2rem);
@@ -218,9 +224,69 @@
     height: 5vh;
   }
 }
+
+@media (max-width: 480px) {
+  .nurturingTitle {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+  .nurturingDesc {
+    font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+    padding-left: 6vw;
+    padding-right: 6vw;
+    line-height: 1.6;
+  }
+  .servicesTitle {
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  }
+  .servicesDesc {
+    font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+    padding-left: 6vw;
+    padding-right: 6vw;
+    line-height: 1.6;
+  }
+  .serviceBtn {
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+    height: 3vh;
+    width: 35vw;
+    min-width: 3.5rem;
+    padding: 0.1em 0.4em;
+  }
+}
+
+@media (max-width: 320px) {
+  .nurturingTitle {
+    font-size: clamp(0.7rem, 1.8vw, 0.8rem);
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+  .nurturingDesc {
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    padding-left: 8vw;
+    padding-right: 8vw;
+    line-height: 1.7;
+  }
+  .servicesTitle {
+    font-size: clamp(0.7rem, 1.6vw, 0.8rem);
+  }
+  .servicesDesc {
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    padding-left: 8vw;
+    padding-right: 8vw;
+    line-height: 1.7;
+  }
+  .serviceBtn {
+    font-size: clamp(0.55rem, 1vw, 0.65rem);
+    height: 2.8vh;
+    width: 40vw;
+    min-width: 3rem;
+    padding: 0.1em 0.3em;
+  }
+}
 @media (max-width: 600px) {
   .nurturingSection {
-    height: 30vh;
+    min-height: 30vh;
     padding-top: 7vh;
     overflow: hidden;
   }
@@ -240,7 +306,7 @@
     overflow: hidden;
   }
   .servicesCurvedBox {
-    height: 37vh;
+    min-height: 37vh;
     overflow: hidden;
   }
   .servicesTitle {
