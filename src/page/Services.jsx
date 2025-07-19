@@ -105,6 +105,7 @@ const Services = () => {
       <SEO 
         title="Our Services - ThaiNest Massage & Facial"
         description="Discover our range of professional massage therapy and facial treatments. From Thai therapeutic massage to deep cleansing facials, book your nesting experience today."
+        canonical="https://thainestmassage.com.au/services"
       />
       <div className={styles.servicesHeroSection} id="services-hero-section">
         <div className={styles.servicesHeroContainer + ' ' + styles.fadeSlideIn}>

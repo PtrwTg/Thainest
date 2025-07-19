@@ -98,6 +98,7 @@ const App = () => {
       <SEO 
         title="ThaiNest Massage & Facial - Relax, Relieve, Return to Nest"
         description="Experience authentic Thai massage and facial treatments at ThaiNest Caloundra. Professional massage therapy and skincare services in a relaxing environment."
+        canonical="https://thainestmassage.com.au/"
       />
       <Navbar />
       <ScrollToTop />

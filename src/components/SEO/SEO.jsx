@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 
-const SEO = ({ title, description, structuredData }) => {
+const SEO = ({ title, description, canonical, structuredData }) => {
   const BASE_URL = "https://thainestmassage.com.au";
   const logoUrl = `${BASE_URL}/assets/images/LogoThaiNest.svg`;
   const siteName = "ThaiNest Massage & Facial";
@@ -71,6 +71,7 @@ const SEO = ({ title, description, structuredData }) => {
     <Helmet>
       <title>{title}</title>
       {description && <meta name="description" content={description} />}
+      {canonical && <link rel="canonical" href={canonical} />}
 
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
