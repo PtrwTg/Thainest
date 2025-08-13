@@ -16,12 +16,20 @@ const contactConfig = {
   "operationTitle": "Operation Hours",
   "operationHours": [
     {
-      "day": "Monday - Saturday",
+      "day": "Monday, Tuesday , Wednesday ",
+      "time": "9:00am - 5:00pm"
+    },
+    {
+      "day": "Thursday & Friday ",
+      "time": "9:00am - 6:30pm"
+    },
+    {
+      "day": "Saturday ",
       "time": "9:00am - 5:00pm"
     },
     {
       "day": "Sunday",
-      "time": "9:00am - 1:00pm"
+      "time": "Closed"
     }
   ],
   "operationNote": "Private Health Rebates Available."
