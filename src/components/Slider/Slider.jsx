@@ -14,7 +14,7 @@ const imageMap = {
 // slideTexts: array ของ object (headline + image)
 // เพิ่ม/ลบ slide ได้ง่าย แค่เพิ่ม/ลบ object ใน array นี้
 const slideTexts = [
-  { headline: 'a?/', image: 'slide1.svg' },
+  { headline: 'Relax', image: 'slide1.svg' },
   { headline: 'Relieve', image: 'slide2.svg' },
   { headline: 'Return to Nest', image: 'slide3.svg' },
 ];
